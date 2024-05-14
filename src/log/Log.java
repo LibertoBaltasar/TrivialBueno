@@ -2,139 +2,114 @@ package log;
 
 public class Log {
 //mensajes Main
-    public static void mensajeMain(){
-            System.out.println("Se ha entrado en el método main");
-    }
+    public static final String mensajeMain="Se ha entrado en el método main";
 
-    public static void mensajemenuPrincipal(){
-        System.out.println("Se ha entrado al menú principal");
-    }
+    public static final String mensajemenuPrincipal="Se ha entrado al menú principal";
 
-    public static void mensajeFinPrograma(){
-        System.out.println("El programa ha finalizado");
-    }
+    public static final String mensajeFinPrograma="El programa ha finalizado";
 
 //Mensajes menú opciones partida
     //TODO: 07/05/2024 mejorar este log
-    public static void mensajemenuPartidaOpciones(int numJugadores, int numJugadoresHumanos, int opcion){
+    public static String mensajemenuPartidaOpciones(int numJugadores, int numJugadoresHumanos, int opcion){
         System.out.println("Se ha elegido la opción "+opcion+" con "+numJugadores+" jugadores y "+numJugadoresHumanos+" jugadores humanos en el menú partida");
     }
 
 //mensajes inicializar
-    public static void mensajeComprobarFicheros(){
-        System.out.println("Se ha comprobado si los ficheros existen");
-    }
+    public static final String mensajeComprobarFicheros="Se ha comprobado si los ficheros existen";
 
-    public static void mensajeInicializarGestionJugadores(){
+    public static String mensajeInicializarGestionJugadores(){
         System.out.println("Se ha inicializado el arrayList de jugadores");
     }
 
 //mensajes gestión jugadores
-    public static void mensajeMenuGestionJugadores() {
-        System.out.println("Se ha entrado en el menú de gestión de jugadores");
-    }
+    public static final String mensajeMenuGestionJugadores="Se ha entrado en el menú de gestión de jugadores";
 
-    public static void mensajeComprobarJugador(String nombreJugador){
+    public static String mensajeComprobarJugador(String nombreJugador){
         System.out.println("Se ha comprobado si el jugador "+nombreJugador+" existe");
     }
 
-    public static void mensajeDevolverJugador(String nombreJugador){
+    public static String mensajeDevolverJugador(String nombreJugador){
         System.out.println("Se ha devuelto el jugador "+nombreJugador);
     }
 
-    public static void mensajeVerJugadoresConPuntuacion(){
-        System.out.println("Se han mostrado los jugadores con puntuación o Ranking");
-    }
+    public static final String mensajeVerJugadoresConPuntuacion="Se han mostrado los jugadores con puntuación o Ranking";
 
-    public static void mensajeVerJugadorSimple(){
-        System.out.println("Se han mostrado los jugadores sin puntuación");
-    }
+    public static final String mensajeVerJugadorSimple="Se han mostrado los jugadores sin puntuación";
 
-    public static void mensajeEliminarJugador(String nombre){
+    public static String mensajeEliminarJugador(String nombre){
         System.out.println("Se ha eliminado el jugador "+nombre);
     }
 
-    public static void mensajeAnnadirJugador(String nombre){
+    public static String mensajeAnnadirJugador(String nombre){
         System.out.println("Se ha añadido el jugador "+nombre);
     }
 
-    public static void mensajeOrdenarJugadores(){
-        System.out.println("Se han ordenado los jugadores por puntuación");
-    }
+    public static final String mensajeOrdenarJugadores="Se han ordenado los jugadores por puntuación";
 
-    public static void mensajeGuardarNuevoRanking() {
-        System.out.println("Se ha actualizado el ranking");
-    }
+    public static final String mensajeGuardarNuevoRanking="Se ha actualizado el ranking";
     //mensajes partida
-    public static void mensajeCrearPartida(int numTurnos, int numJugadores, int numJugadoresHumanos){
+    public static final String mensajeCrearPartida(int numTurnos, int numJugadores, int numJugadoresHumanos){
         System.out.println("Se ha creado una partida con "+numTurnos+" turnos, "+numJugadores+" jugadores y "+numJugadoresHumanos+" jugadores humanos");
     }
 
-    public static void mensajeBuclePartida(){
-        System.out.println("Se ha entrado en el bucle de la partida");
-    }
+    public static final String mensajeBuclePartida="Se ha entrado en el bucle de la partida";
 
-    public static void mensajeCrearTurno(String nombreJugador){
+    public static String mensajeCrearTurno(String nombreJugador){
         System.out.println("Se ha creado un turno para el jugador "+nombreJugador);
     }
 
-    public static void mensajeFinPartida(){
-        System.out.println("La partida ha finalizado");
-    }
+    public static final String mensajeFinPartida="La partida ha finalizado";
+
 //mensajes turnos
-    public static void mensajeturnoElegirPregunta(String nombreJugador, int tipoPregunta){
+    public static String mensajeturnoElegirPregunta(String nombreJugador, int tipoPregunta){
         System.out.println("Al jugador "+nombreJugador+" le ha tocado una pregunta de tipo "+tipoPregunta);
     }
 //mensajes historico
-    public static void mensajeInicializarHistorico(){
-        System.out.println("Se ha inicializado el historico");
-    }
+    public static final String mensajeInicializarHistorico="Se ha inicializado el historico";
 
-    public static void mensajeMostrarHistorico(){
+    public static final String mensajeMostrarHistorico(){
         System.out.println("Se ha mostrado el historico");
     }
 
-    public static void mensajeGuardarNuevoHistorico(){
+    public static final String mensajeGuardarNuevoHistorico(){
         System.out.println("Se ha guardado el histórico actualizado");
     }
     //mensajes preguntas
-    public static void mensajeRespuestaCorrecta(String nombreJugador, int respuestaCorrecta, int respuestaJugador){
+    public static String mensajeRespuestaCorrecta(String nombreJugador, int respuestaCorrecta, int respuestaJugador){
         System.out.println("El jugador "+nombreJugador+" ha acertado la respuesta "+respuestaCorrecta+" con "+respuestaJugador);
     }
 
-    public static void mensajeRespuestaIncorrecta(String nombreJugador, String respuestaCorrecta, String respuestaJugador){
+    public static String mensajeRespuestaIncorrecta(String nombreJugador, String respuestaCorrecta, String respuestaJugador){
         System.out.println("El jugador "+nombreJugador+" ha fallado la respuesta "+respuestaCorrecta+" con "+respuestaJugador);
     }
 //mensajes métodos
-    public static void mensajePedirEntero(int entero){
+    public static String mensajePedirEntero(int entero){
         System.out.println("Se ha pedido un entero y se ha introducido: "+entero);
     }
 
-    public static void mensajePedirCadena(String cadena){
+    public static String mensajePedirCadena(String cadena){
         System.out.println("Se ha pedido una cadena y se ha introducido: "+cadena);
     }
 
-    public static void mensajeGenerarNumeroAleatorio(int min, int max){
+    public static String mensajeGenerarNumeroAleatorio(int min, int max){
         System.out.println("Se ha generado un número aleatorio entre "+min+" y "+max);
     }
 
-    public static void mensajeTieneEspacios(String cadenaAEvaluar){
+    public static String mensajeTieneEspacios(String cadenaAEvaluar){
         System.out.println("Se ha comprobado si la cadena "+cadenaAEvaluar+" tiene espacios");
     }
 
-    public static void mensajeCambiarCharNumero(char c){
+    public static String mensajeCambiarCharNumero(char c){
         System.out.println("Se ha cambiado el char "+c+" a número");
     }
 
-    public static void mensajeCambiarNumeroChar(int numero){
+    public static String mensajeCambiarNumeroChar(int numero){
         System.out.println("Se ha cambiado el número "+numero+" a char");
     }
 
-    public static void mensajeLimpiarBufferTeclado(){
-        System.out.println("Se ha limpiado el buffer del teclado");
-    }
+    public static final String mensajeLimpiarBufferTeclado="Se ha limpiado el buffer del teclado";
 
-    public static void mensajePedirCaracter(char caracter){
+    public static String mensajePedirCaracter(char caracter){
         System.out.println("Se ha pedido un caracter y se ha introducido: "+caracter);
     }
 
