@@ -108,10 +108,12 @@ public class GestionJugadores implements MenuGenerico{
          return jugadorADevolver;
     }
     public static void verJugadoresConPuntuacion(){
+        JugadorHumano jugador;
         if(jugadores.isEmpty()){
             System.out.println("No hay jugadores");
         }else {
-            for (JugadorHumano jugador : jugadores) {
+            for (int i=jugadores.size()-1;i>=0;i--){
+                jugador=jugadores.get(i);
                 jugador.mostrarJugadorConPuntuacion();
             }
         }
