@@ -18,11 +18,15 @@ public class PreguntaMatematica extends PreguntaGenerica{
     public void mostrarPregunta() {
         int longitud;
         Expression e;
+        int numero;
+        String simbolo;
         longitud=Metodos.generarNumeroAleatorio(4,8);
         this.pregunta="";
         for(int i=0; i<longitud;i++){
             if(i<longitud-1){
-                this.pregunta=this.pregunta+Metodos.generarNumeroAleatorio(2,12)+this.elegirSimbolo(Metodos.generarNumeroAleatorio(1,3));
+                numero=Metodos.generarNumeroAleatorio(2,12);
+                simbolo=this.elegirSimbolo(Metodos.generarNumeroAleatorio(1,3));
+                this.pregunta=this.pregunta+numero+simbolo;
             }else{
                 this.pregunta=this.pregunta+Metodos.generarNumeroAleatorio(2,12);
             }
@@ -37,11 +41,14 @@ public class PreguntaMatematica extends PreguntaGenerica{
         String elegirSimbolo="";
         switch (simbolo){
             case 1:
-                elegirSimbolo="+";;
+                elegirSimbolo="+";
+                break;
             case 2:
                 elegirSimbolo="-";
+                break;
             case 3:
                 elegirSimbolo="*";
+                break;
         }
         return elegirSimbolo;
     }

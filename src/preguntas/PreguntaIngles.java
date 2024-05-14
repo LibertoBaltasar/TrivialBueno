@@ -32,8 +32,9 @@ public class PreguntaIngles extends PreguntaGenerica{
         String respuestaCorrecta;
         String[] posiblesRespuestas= new String[4];
         int numCambios=utilidades.Metodos.generarNumeroAleatorio(4,10);
-
-        preguntaElegida = utilidades.Metodos.generarNumeroAleatorio(0, preguntas.size()/5);
+        do {
+            preguntaElegida = utilidades.Metodos.generarNumeroAleatorio(0, preguntas.size() / 5);
+        }while(preguntaElegida*5>=preguntas.size());
         preguntaElegida=preguntaElegida*5;
         respuestaCorrecta = preguntas.get(preguntaElegida+1);
         for(int i=0;i<4;i++){

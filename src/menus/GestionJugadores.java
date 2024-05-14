@@ -1,5 +1,6 @@
 package menus;
 
+import jugadores.JugadorGenerico;
 import jugadores.JugadorHumano;
 
 import java.io.IOException;
@@ -67,7 +68,10 @@ public class GestionJugadores implements MenuGenerico{
                 String nombreEliminar=utilidades.Metodos.pedirCadena();
                 eliminarJugador(nombreEliminar);
                 break;
+            case 4:
+                break;
             default:
+                utilidades.Metodos.limpiarBufferTeclado();
                 break;
         }
     }
@@ -125,12 +129,36 @@ public class GestionJugadores implements MenuGenerico{
                 JugadorHumano jugador = new JugadorHumano(nombre, 0);
                 jugadores.add(jugador);
             }
+            GestionJugadores.ordenarJugadores();
+            GestionJugadores.reescribirRanking();
             log.Log.mensajeAnnadirJugador(nombre);
+    }
+    public static void annadirPuntuacionHistoricaJugador(String nombre, int puntuacion){
+        if(!comprobarJugadorNoExiste(nombre)) {
+            for (JugadorHumano jugador : jugadores) {
+                if (jugador.getNombre().equals(nombre)) {
+                    jugador.setPuntuacionHistorica(puntuacion);
+                }
+            }
+        }else{
+            JugadorHumano jugador = new JugadorHumano(nombre,puntuacion);
+            jugadores.add(jugador);
+        }
     }
 
     public static void eliminarJugador(String nombre){
-        jugadores.removeIf(jugador -> jugador.getNombre().equals(nombre));
-        log.Log.mensajeEliminarJugador(nombre);
+        boolean borrado=false;
+        for (JugadorHumano jugador: jugadores) {
+            if (jugador.getNombre().equals(nombre)){
+                jugadores.remove(jugador);
+                borrado=true;
+            }
+        }
+        if(borrado){
+            log.Log.mensajeEliminarJugador(nombre);
+        }else{
+            System.out.println("No se ha encontrado el jugador");
+        }
     }
 
     public static void ordenarJugadores() {
@@ -138,24 +166,36 @@ public class GestionJugadores implements MenuGenerico{
         log.Log.mensajeOrdenarJugadores();
     }
 
-    public static void actualizarRanking(){
+    public static void actualizarRanking(JugadorGenerico[] jugadoresPartida){
+        String nombre;
+        int puntuacionHistorica;
+        for (int i=0;i<jugadoresPartida.length;i++){
+            if(jugadoresPartida[i] instanceof JugadorHumano){
+              nombre=jugadoresPartida[i].getNombre();
+              puntuacionHistorica= ((JugadorHumano) jugadoresPartida[i]).getPuntuacionHistorica()+((JugadorHumano) jugadoresPartida[i]).getPuntuacion();
+              GestionJugadores.annadirPuntuacionHistoricaJugador(nombre, puntuacionHistorica);
+            }
+        }
         ordenarJugadores();
+        reescribirRanking();
+        //TODO CREAR LOG
+    }
+    public static void reescribirRanking(){
         String jugadorString;
         Path path = Paths.get(utilidades.Rutas.RUTA_RANKING);
         try {
-
             if (Files.exists(path)) {
                 Files.delete(path);
             }
-
             Files.createFile(path);
-
+            JugadorHumano jugador;
             for (int i = 0; i < jugadores.size(); i++) {
-                JugadorHumano jugador = jugadores.get(i);
-                jugadorString = jugador.getNombre() + "," + jugador.getPuntuacion();
+                jugador = jugadores.get(i);
+                jugadorString = jugador.getNombre() + "," + jugador.getPuntuacion()+"\n";
                 if (i == 0) {
                     Files.write(path, jugadorString.getBytes(), StandardOpenOption.WRITE);
                 }else{
+                    //TODO: ME LO AÑADE TODO EN LA MISMA LÍNEA
                     Files.write(path, jugadorString.getBytes(), StandardOpenOption.APPEND);
                 }
             }

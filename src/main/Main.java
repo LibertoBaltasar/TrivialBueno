@@ -11,6 +11,6 @@ public class Main {
         Inicializar.inicializar();
         MenuPrincipal menu=new MenuPrincipal();
         menu.mostrarMenu();
-        // TODO: REINICIAR OPCIONES EN MENÚS
+        log.Log.mensajeFinPrograma();
     }
 }

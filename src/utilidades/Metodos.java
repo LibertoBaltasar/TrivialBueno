@@ -20,11 +20,8 @@ public class Metodos {
     public static String pedirCadena() {
         String cadena;
         cadena = teclado.nextLine();
-        Metodos.limpiarBufferTecladoInt();
         log.Log.mensajePedirCadena(cadena);
         return cadena;
-        // TODO: 06/05/2024 controlar excepcion
-
     }
     public static int pedirEntero() {
         int entero;
@@ -32,8 +29,8 @@ public class Metodos {
         do {
             try {
                 entero = teclado.nextInt();
+                Metodos.limpiarBufferTeclado();
                 log.Log.mensajePedirEntero(entero);
-                Metodos.limpiarBufferTecladoInt();
                 valido = true;
             } catch (Exception e) {
                 System.out.println("Introduce un número");
@@ -42,35 +39,34 @@ public class Metodos {
             }
         }while(!valido);
         return entero;
-        // TODO: 06/05/2024 controlar excepcion
     }
     public static char pedirCaracter(){
         String entrada = teclado.nextLine();
-        Metodos.limpiarBufferTeclado();
         char caracter = entrada.charAt(0);
         log.Log.mensajePedirCaracter(caracter);
         return caracter;
     }
     public static int cambiarCharNumero(char c) {
+        int numero;
         switch (c) {
             case 'a':
-                c = '1';
+                numero = 0;
                 break;
             case 'b':
-                c = '2';
+                numero = 1;
                 break;
             case 'c':
-                c = '3';
+                numero = 2;
                 break;
             case 'd':
-                c = '4';
+                numero = 3;
                 break;
             default:
-                c=5;
+                numero=5;
                 break;
         }
         log.Log.mensajeCambiarCharNumero(c);
-        return (int) c;
+        return numero;
     }
     public static char cambiarNumeroChar(int numero) {
         char caracterCambiado;
@@ -94,19 +90,10 @@ public class Metodos {
         log.Log.mensajeCambiarNumeroChar(numero);
         return caracterCambiado;
     }
-    public static void limpiarBufferTecladoInt() {
-        if(teclado.hasNextLine()){
-            teclado.nextLine();
-            log.Log.mensajeLimpiarBufferTeclado();
-        }
-    }
-    public static void limpiarBufferTeclado() {
-        if(teclado.hasNext()){
-            teclado.nextLine();
-            log.Log.mensajeLimpiarBufferTeclado();
-        }
-    }
-    public static void guardarNuevoRanking(){
 
+    public static void limpiarBufferTeclado() {
+
+        teclado.nextLine();
+        log.Log.mensajeLimpiarBufferTeclado();
     }
 }

@@ -7,6 +7,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 public class Historico {
@@ -34,14 +35,19 @@ public class Historico {
     public static void guardarNuevoHistorico(){
         Path path = Paths.get(utilidades.Rutas.RUTA_HISTORICO);
         try {
-            // Si el archivo existe, lo elimina
             if (Files.exists(path)) {
                 Files.delete(path);
             }
-            // Crea un nuevo archivo
             Files.createFile(path);
-            // Escribe todas las líneas del ArrayList historico en el nuevo archivo
-            Files.write(path, historico);
+
+            for (int i = 0; i < historico.size(); i++) {
+
+                if (i == 0) {
+                    Files.write(path, historico.get(i).getBytes(), StandardOpenOption.WRITE);
+                }else{
+                    Files.write(path, historico.get(i).getBytes(), StandardOpenOption.APPEND);
+                }
+            }
             log.Log.mensajeGuardarNuevoHistorico();
         } catch (IOException e) {
             e.printStackTrace();
@@ -50,5 +56,6 @@ public class Historico {
     public static void actualizarHistorico(String resultadoPartida){
         historico.add(resultadoPartida);
         Historico.guardarNuevoHistorico();
+        //TODO CREAR LOG
     }
 }

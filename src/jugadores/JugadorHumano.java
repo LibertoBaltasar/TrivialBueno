@@ -4,9 +4,24 @@ import preguntas.PreguntaIngles;
 
 public class JugadorHumano extends JugadorGenerico{
     int puntuacionHistorica;
+
     public JugadorHumano(String nombre, int puntuacionHistorica) {
         this.puntuacion =0;
         this.nombre = nombre;
+        this.puntuacionHistorica = puntuacionHistorica;
+    }
+
+    public JugadorHumano(String nombre) {
+        this.puntuacion =0;
+        this.nombre = nombre;
+        this.puntuacionHistorica = 0;
+    }
+
+    public int getPuntuacionHistorica() {
+        return puntuacionHistorica;
+    }
+
+    public void setPuntuacionHistorica(int puntuacionHistorica) {
         this.puntuacionHistorica = puntuacionHistorica;
     }
 
@@ -57,7 +72,7 @@ public class JugadorHumano extends JugadorGenerico{
             if (respuestaJugadorInt==5){
                 System.out.println("Introduce una respuesta válida");
             }
-        }while(respuestaJugadorInt!=5);
+        }while(respuestaJugadorInt==5);
         respuestaJugadorString=PreguntaIngles.devolverRespuestaSeleccionada(respuestaJugadorInt,posiblesRespuestas);
         if (respuestaJugadorString.equals(RespuestaCorrecta)) {
             System.out.println("Respuesta correcta");

@@ -16,30 +16,31 @@ public class MenuPartidaOpciones implements MenuGenerico{
                 this.elegirNumeroJugadores();
                 this.elegirNumeroJugadoresHumanos();
                 this.numTurnos= obtenerNumeroDeTurnos(opcion);
-                this.partida=new Partida(this.numTurnos,this.numJugadores,this.numJugadoresHumanos);
                 this.opcionElegida();
             }
             log.Log.mensajemenuPartidaOpciones(this.numJugadores,this.numJugadoresHumanos,this.opcion);
         }while(this.opcion!=5);
+
     }
 
     @Override
     public void opcionElegida() {
-    partida.buclePartida();
+        this.partida=new Partida(this.numTurnos,this.numJugadores,this.numJugadoresHumanos);
+        partida.buclePartida();
     }
     public int obtenerNumeroDeTurnos(int opcion) {
-    switch (opcion) {
-        case 1:
-            return 3;
-        case 2:
-            return 5;
-        case 3:
-            return 10;
-        case 4:
-            return 20;
-        default:
-            return 0;
-        }
+        switch (opcion) {
+            case 1:
+                return 3;
+            case 2:
+                return 5;
+            case 3:
+                return 10;
+            case 4:
+                return 20;
+            default:
+                return 0;
+            }
     }
     private void elegirTipoPartida(){
         do {
@@ -71,6 +72,6 @@ public class MenuPartidaOpciones implements MenuGenerico{
             if (numJugadoresHumanos < 0 || numJugadoresHumanos > numJugadores) {
                 System.out.println("Introduce un número de jugadores válido");
             }
-        }while (numJugadoresHumanos < 1 || numJugadoresHumanos > numJugadores) ;
+        }while (numJugadoresHumanos < 0 || numJugadoresHumanos > numJugadores) ;
     }
 }

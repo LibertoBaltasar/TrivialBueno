@@ -10,6 +10,10 @@ public class Log {
         System.out.println("Se ha entrado al menú principal");
     }
 
+    public static void mensajeFinPrograma(){
+        System.out.println("El programa ha finalizado");
+    }
+
 //Mensajes menú opciones partida
     //TODO: 07/05/2024 mejorar este log
     public static void mensajemenuPartidaOpciones(int numJugadores, int numJugadoresHumanos, int opcion){

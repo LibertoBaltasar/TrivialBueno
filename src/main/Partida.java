@@ -50,18 +50,23 @@ public class Partida {
             }
             turnosJugados++;
         }while(turnosJugados<numTurnos);
+        resultadoPartida=this.generarResultadoPartida();
         Historico.actualizarHistorico(resultadoPartida);
-        GestionJugadores.actualizarRanking();
+        GestionJugadores.actualizarRanking(arrayJugadores);
         log.Log.mensajeFinPartida();
     }
-    private void generarResultadoPartida(){
+    private String generarResultadoPartida(){
+        this.resultadoPartida="";
+        //TODO:ME APARECE UN NULL EN EL HISTORICO
         for (int i=0; i<arrayJugadores.length;i++){
             System.out.println(arrayJugadores[i].getNombre()+" ha obtenido "+arrayJugadores[i].getPuntuacion()+" puntos");
             if(i!= arrayJugadores.length-1) {
                 this.resultadoPartida = this.resultadoPartida + arrayJugadores[i].getNombre() + ":" + arrayJugadores[i].getPuntuacion() + " puntos//";
             }else{
-            this.resultadoPartida=this.resultadoPartida+arrayJugadores[i].getNombre()+":"+arrayJugadores[i].getPuntuacion()+" puntos";
+            this.resultadoPartida=this.resultadoPartida+arrayJugadores[i].getNombre()+":"+arrayJugadores[i].getPuntuacion()+" puntos\n";
             }
         }
+        return this.resultadoPartida;
+        //TODO CREAR LOG
     }
 }
