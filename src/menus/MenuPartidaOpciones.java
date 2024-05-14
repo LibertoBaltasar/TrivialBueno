@@ -1,5 +1,6 @@
 package menus;
 
+import log.LogStrings;
 import main.Partida;
 
 public class MenuPartidaOpciones implements MenuGenerico{
@@ -18,7 +19,7 @@ public class MenuPartidaOpciones implements MenuGenerico{
                 this.numTurnos= obtenerNumeroDeTurnos(opcion);
                 this.opcionElegida();
             }
-            log.Log.mensajemenuPartidaOpciones(this.numJugadores,this.numJugadoresHumanos,this.opcion);
+            LogStrings.mensajemenuPartidaOpciones(this.numJugadores,this.numJugadoresHumanos,this.opcion);
         }while(this.opcion!=5);
 
     }

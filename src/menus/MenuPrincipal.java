@@ -1,9 +1,8 @@
 package menus;
 
-import java.util.Scanner;
-
+import log.LogStrings;
 import main.Historico;
-import utilidades.Metodos;
+
 public class MenuPrincipal implements MenuGenerico{
     int opcion;
     @Override
@@ -21,7 +20,7 @@ public class MenuPrincipal implements MenuGenerico{
                 System.out.println("Opción no válida");
             }
             this.opcionElegida();
-            log.Log.mensajemenuPrincipal();
+            LogStrings.mensajemenuPrincipal();
         }while(opcion!=5);
         // TODO: 05/05/2024 después de cada vuelta actualiza Ranking e histórico
         System.out.println("Has salido del menú principal");

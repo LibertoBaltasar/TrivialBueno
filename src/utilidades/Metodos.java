@@ -1,5 +1,7 @@
 package utilidades;
 
+import log.LogStrings;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -7,20 +9,20 @@ public class Metodos {
     private static final Scanner teclado = new Scanner(System.in);
     public static int generarNumeroAleatorio(int min, int max) {
         Random rand = new Random();
-        log.Log.mensajeGenerarNumeroAleatorio(min, max);
+        LogStrings.mensajeGenerarNumeroAleatorio(min, max);
         return rand.nextInt((max - min) + 1) + min;
 
     }
 
     public static boolean tieneEspacios(String cadenaAEvaluar) {
-        log.Log.mensajeTieneEspacios(cadenaAEvaluar);
+        LogStrings.mensajeTieneEspacios(cadenaAEvaluar);
         return !cadenaAEvaluar.contains(" ");
     }
 
     public static String pedirCadena() {
         String cadena;
         cadena = teclado.nextLine();
-        log.Log.mensajePedirCadena(cadena);
+        LogStrings.mensajePedirCadena(cadena);
         return cadena;
     }
     public static int pedirEntero() {
@@ -30,12 +32,12 @@ public class Metodos {
             try {
                 entero = teclado.nextInt();
                 Metodos.limpiarBufferTeclado();
-                log.Log.mensajePedirEntero(entero);
+                LogStrings.mensajePedirEntero(entero);
                 valido = true;
             } catch (Exception e) {
                 System.out.println("Introduce un número");
                 entero = 0;
-                log.Log.mensajePedirEntero(entero);
+                LogStrings.mensajePedirEntero(entero);
             }
         }while(!valido);
         return entero;
@@ -43,7 +45,7 @@ public class Metodos {
     public static char pedirCaracter(){
         String entrada = teclado.nextLine();
         char caracter = entrada.charAt(0);
-        log.Log.mensajePedirCaracter(caracter);
+        LogStrings.mensajePedirCaracter(caracter);
         return caracter;
     }
     public static int cambiarCharNumero(char c) {
@@ -65,7 +67,7 @@ public class Metodos {
                 numero=5;
                 break;
         }
-        log.Log.mensajeCambiarCharNumero(c);
+        LogStrings.mensajeCambiarCharNumero(c);
         return numero;
     }
     public static char cambiarNumeroChar(int numero) {
@@ -87,13 +89,13 @@ public class Metodos {
                 caracterCambiado='e';
                 break;
         }
-        log.Log.mensajeCambiarNumeroChar(numero);
+        LogStrings.mensajeCambiarNumeroChar(numero);
         return caracterCambiado;
     }
 
     public static void limpiarBufferTeclado() {
 
         teclado.nextLine();
-        log.Log.mensajeLimpiarBufferTeclado();
+        LogStrings.mensajeLimpiarBufferTeclado();
     }
 }

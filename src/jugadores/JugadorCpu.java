@@ -1,5 +1,7 @@
 package jugadores;
 
+import log.LogStrings;
+
 public class JugadorCpu extends JugadorGenerico{
     public JugadorCpu(String nombre) {
         this.puntuacion = 0;
@@ -15,14 +17,14 @@ public class JugadorCpu extends JugadorGenerico{
             respuestaJugador = respuestaJugador.substring(0, respuestaJugador.length() - 1) + 'o';
         }
         System.out.println("Respuesta incorrecta");
-        log.Log.mensajeRespuestaIncorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador);
+        LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador);
     }
 
     @Override
     public void responderMatematicas(int respuesta) {
         System.out.println("Su respuesta es: " + respuesta);
         this.puntuar();
-        log.Log.mensajeRespuestaCorrecta(this.getNombre(), respuesta, respuesta);
+        LogStrings.mensajeRespuestaCorrecta(this.getNombre(), respuesta, respuesta);
     }
 
     @Override

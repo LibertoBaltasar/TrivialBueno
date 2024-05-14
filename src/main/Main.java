@@ -1,16 +1,15 @@
 package main;
 
+import log.LogStrings;
 import menus.MenuPrincipal;
 import utilidades.Inicializar;
 
-import java.awt.*;
-
 public class Main {
     public static void main(String[] args) {
-        log.Log.mensajeMain();
+        LogStrings.mensajeMain();
         Inicializar.inicializar();
         MenuPrincipal menu=new MenuPrincipal();
         menu.mostrarMenu();
-        log.Log.mensajeFinPrograma();
+        LogStrings.mensajeFinPrograma();
     }
 }

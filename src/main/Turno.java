@@ -1,6 +1,7 @@
 package main;
 
 import jugadores.JugadorGenerico;
+import log.LogStrings;
 import preguntas.PreguntaGenerica;
 import preguntas.PreguntaIngles;
 import preguntas.PreguntaLengua;
@@ -12,7 +13,7 @@ public class Turno {
 
     public Turno(JugadorGenerico jugador) {
         this.jugador = jugador;
-        log.Log.mensajeCrearTurno(this.jugador.getNombre());
+        LogStrings.mensajeCrearTurno(this.jugador.getNombre());
     }
 
     public void elegirPregunta(){
@@ -31,6 +32,6 @@ public class Turno {
                 break;
         }
         pregunta.mostrarPregunta();
-        log.Log.mensajeturnoElegirPregunta(jugador.getNombre(), tipoPregunta);
+        LogStrings.mensajeturnoElegirPregunta(jugador.getNombre(), tipoPregunta);
     }
 }

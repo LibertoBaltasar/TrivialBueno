@@ -1,5 +1,6 @@
 package jugadores;
 
+import log.LogStrings;
 import preguntas.PreguntaIngles;
 
 public class JugadorHumano extends JugadorGenerico{
@@ -53,7 +54,7 @@ public class JugadorHumano extends JugadorGenerico{
         if (respuestaJugador == respuestaCorrecta) {
             System.out.println("Respuesta correcta");
             puntuacion++;
-            log.Log.mensajeRespuestaCorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador);
+            LogStrings.mensajeRespuestaCorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador);
         } else {
             System.out.println("Respuesta incorrecta");
         }

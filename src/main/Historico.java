@@ -1,9 +1,8 @@
 package main;
 
-import jugadores.JugadorHumano;
+import log.LogStrings;
 
 import java.io.IOException;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -16,7 +15,7 @@ public class Historico {
         Path path = Paths.get(utilidades.Rutas.RUTA_HISTORICO);
         try {
             historico = (ArrayList<String>) Files.readAllLines(path);
-            log.Log.mensajeInicializarHistorico();
+            LogStrings.mensajeInicializarHistorico();
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -30,7 +29,7 @@ public class Historico {
                 System.out.println(linea);
             }
         }
-        log.Log.mensajeMostrarHistorico();
+        LogStrings.mensajeMostrarHistorico();
     }
     public static void guardarNuevoHistorico(){
         Path path = Paths.get(utilidades.Rutas.RUTA_HISTORICO);
@@ -48,7 +47,7 @@ public class Historico {
                     Files.write(path, historico.get(i).getBytes(), StandardOpenOption.APPEND);
                 }
             }
-            log.Log.mensajeGuardarNuevoHistorico();
+            LogStrings.mensajeGuardarNuevoHistorico();
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -1,8 +1,8 @@
 package utilidades;
 
+import log.LogStrings;
 import menus.GestionJugadores;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -16,7 +16,7 @@ public class Inicializar {
     }
     // TODO: 07/05/2024 meter las rutas como constantes 
     public static void comprobarFicheros() {
-        Path path = Paths.get("ficheros/historico/historico.txt");
+        Path path = Paths.get(Rutas.RUTA_HISTORICO);
         if (Files.notExists(path)) {
             try {
                 Files.createFile(path);
@@ -24,7 +24,7 @@ public class Inicializar {
                 System.out.println("No se puede crear el fichero historico.txt");
             }
         }
-        path = Paths.get("ficheros/ranking/ranking.txt");
+        path = Paths.get(Rutas.RUTA_RANKING);
         if (Files.notExists(path)) {
             try {
                 Files.createFile(path);
@@ -32,7 +32,7 @@ public class Inicializar {
                 System.out.println("No se puede crear el fichero ranking.txt");
             }
         }
-        log.Log.mensajeComprobarFicheros();
+        LogStrings.mensajeComprobarFicheros();
     }
     public static void inicializarArrayJugadores(){
         GestionJugadores.inicializarGestionJugadores("/ficheros/ranking/ranking.txt");

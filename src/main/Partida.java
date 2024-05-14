@@ -1,6 +1,7 @@
 package main;
 
 import jugadores.JugadorGenerico;
+import log.LogStrings;
 import menus.GestionJugadores;
 
 public class Partida {
@@ -37,7 +38,7 @@ public class Partida {
                 arrayJugadores[numJugadoresHumanos+i]=new jugadores.JugadorCpu("CPU"+(1+i));
             }
         }
-        log.Log.mensajeCrearPartida(numTurnos, numJugadores, numJugadoresHumanos);
+        LogStrings.mensajeCrearPartida(numTurnos, numJugadores, numJugadoresHumanos);
     }
 
     public void buclePartida(){
@@ -53,7 +54,7 @@ public class Partida {
         resultadoPartida=this.generarResultadoPartida();
         Historico.actualizarHistorico(resultadoPartida);
         GestionJugadores.actualizarRanking(arrayJugadores);
-        log.Log.mensajeFinPartida();
+        LogStrings.mensajeFinPartida();
     }
     private String generarResultadoPartida(){
         this.resultadoPartida="";
