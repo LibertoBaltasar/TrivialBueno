@@ -1,14 +1,14 @@
 package menus;
 
-import java.util.Scanner;
-
+import log.Log;
+import log.LogStrings;
 import main.Historico;
-import utilidades.Metodos;
+
 public class MenuPrincipal implements MenuGenerico{
     int opcion;
     @Override
     public void mostrarMenu(){
-        // TODO: 01/05/2024 muestra el menú y llama a opcionElegida dentro del bucle
+
         do {
             System.out.println("Introduce un número para seleccionar la opción deseada");
             System.out.println("1.-Jugar");
@@ -20,19 +20,20 @@ public class MenuPrincipal implements MenuGenerico{
             if(opcion<1 || opcion>5){
                 System.out.println("Opción no válida");
             }
-            this.opcionElegida();
-            log.Log.mensajemenuPrincipal();
+            this.gestionarOpcion();
+            Log.escribirLog(LogStrings.mensajemenuPrincipal);
         }while(opcion!=5);
-        // TODO: 05/05/2024 después de cada vuelta actualiza Ranking e histórico
+        Log.escribirLog(LogStrings.mensajeMensajeMostrarMenuMenuPrincipal);
         System.out.println("Has salido del menú principal");
 
     }
     @Override
-    public void opcionElegida(){
+    public void gestionarOpcion(){
         MenuGenerico menu;
         switch (this.opcion) {
             case 1:
                 menu = new MenuPartidaOpciones();
+                Log.escribirLog(LogStrings.mensajeGestionarOpcionMenuPrincipal);
                 menu.mostrarMenu();
                 break;
             case 2:

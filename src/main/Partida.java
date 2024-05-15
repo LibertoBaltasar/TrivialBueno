@@ -1,6 +1,8 @@
 package main;
 
 import jugadores.JugadorGenerico;
+import log.Log;
+import log.LogStrings;
 import menus.GestionJugadores;
 
 public class Partida {
@@ -37,7 +39,7 @@ public class Partida {
                 arrayJugadores[numJugadoresHumanos+i]=new jugadores.JugadorCpu("CPU"+(1+i));
             }
         }
-        log.Log.mensajeCrearPartida(numTurnos, numJugadores, numJugadoresHumanos);
+        Log.escribirLog(LogStrings.mensajeCrearPartida(numTurnos, numJugadores, numJugadoresHumanos));
     }
 
     public void buclePartida(){
@@ -53,11 +55,10 @@ public class Partida {
         resultadoPartida=this.generarResultadoPartida();
         Historico.actualizarHistorico(resultadoPartida);
         GestionJugadores.actualizarRanking(arrayJugadores);
-        log.Log.mensajeFinPartida();
+        Log.escribirLog(LogStrings.mensajeFinPartida);
     }
     private String generarResultadoPartida(){
         this.resultadoPartida="";
-        //TODO:ME APARECE UN NULL EN EL HISTORICO
         for (int i=0; i<arrayJugadores.length;i++){
             System.out.println(arrayJugadores[i].getNombre()+" ha obtenido "+arrayJugadores[i].getPuntuacion()+" puntos");
             if(i!= arrayJugadores.length-1) {
@@ -66,7 +67,8 @@ public class Partida {
             this.resultadoPartida=this.resultadoPartida+arrayJugadores[i].getNombre()+":"+arrayJugadores[i].getPuntuacion()+" puntos\n";
             }
         }
+        Log.escribirLog(LogStrings.mensajeGenerarResultadoPartida(this.resultadoPartida));
         return this.resultadoPartida;
-        //TODO CREAR LOG
+
     }
 }

@@ -1,47 +1,55 @@
 package utilidades;
 
+import log.Log;
+import log.LogStrings;
 import menus.GestionJugadores;
 
-import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Inicializar {
     public static void inicializar(){
+        inicializarLog();
         comprobarFicheros();
         inicializarArrayJugadores();
         inicializarHistorico();
         inicializarPreguntas();
+        Log.escribirLog(LogStrings.mensajeInicializarGeneral);
     }
     // TODO: 07/05/2024 meter las rutas como constantes 
     public static void comprobarFicheros() {
-        Path path = Paths.get("ficheros/historico/historico.txt");
+        Path path = Paths.get(Rutas.RUTA_HISTORICO);
         if (Files.notExists(path)) {
             try {
                 Files.createFile(path);
             } catch (Exception e) {
+                e.printStackTrace();
                 System.out.println("No se puede crear el fichero historico.txt");
             }
         }
-        path = Paths.get("ficheros/ranking/ranking.txt");
+        path = Paths.get(Rutas.RUTA_RANKING);
         if (Files.notExists(path)) {
             try {
                 Files.createFile(path);
             } catch (Exception e) {
+                e.printStackTrace();
                 System.out.println("No se puede crear el fichero ranking.txt");
             }
         }
-        log.Log.mensajeComprobarFicheros();
+        Log.escribirLog(LogStrings.mensajeComprobarFicheros);
     }
-    public static void inicializarArrayJugadores(){
+    private static void inicializarArrayJugadores(){
         GestionJugadores.inicializarGestionJugadores("/ficheros/ranking/ranking.txt");
     }
-    public static void inicializarHistorico() {
+    private static void inicializarHistorico() {
         main.Historico.inicializarHistorico();
     }
-    public static void inicializarPreguntas(){
+    private static void inicializarPreguntas(){
         preguntas.PreguntaIngles.inicializarArrayIngles();
         preguntas.PreguntaLengua.inicializarArrayPreguntasLengua();
+    }
+    private static void inicializarLog(){
+        Log.inicializarLog();
     }
 }

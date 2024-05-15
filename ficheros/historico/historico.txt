@@ -1,2 +1,0 @@
-CPU1:10 puntosCPU1:8 puntos//CPU2:11 puntos//CPU3:5 puntos//CPU4:9 puntosCPU1:5 puntos//CPU2:6 puntos//CPU3:9 puntos//CPU4:7 puntosCPU1:6 puntos//CPU2:10 puntos//CPU3:7 puntos//CPU4:7 puntosCPU1:14 puntos//CPU2:2 puntos//CPU3:11 puntos//CPU4:10 puntosCPU1:11 puntos//CPU2:6 puntos//CPU3:7 puntos//CPU4:9 puntosCPU1:8 puntos//CPU2:8 puntos//CPU3:8 puntos//CPU4:10 puntosCPU1:10 puntos//CPU2:10 puntos//CPU3:6 puntos//CPU4:6 puntosliberto:2 puntosraquel:1 puntospepe:4 puntosraquel:4 puntosraquel:3 puntos
-liberto:1 puntos

@@ -1,6 +1,8 @@
 package main;
 
 import jugadores.JugadorGenerico;
+import log.Log;
+import log.LogStrings;
 import preguntas.PreguntaGenerica;
 import preguntas.PreguntaIngles;
 import preguntas.PreguntaLengua;
@@ -8,11 +10,11 @@ import preguntas.PreguntaMatematica;
 import utilidades.Metodos;
 
 public class Turno {
-    JugadorGenerico jugador;
+    private JugadorGenerico jugador;
 
     public Turno(JugadorGenerico jugador) {
         this.jugador = jugador;
-        log.Log.mensajeCrearTurno(this.jugador.getNombre());
+        Log.escribirLog(LogStrings.mensajeCrearTurno(this.jugador.getNombre()));
     }
 
     public void elegirPregunta(){
@@ -31,6 +33,6 @@ public class Turno {
                 break;
         }
         pregunta.mostrarPregunta();
-        log.Log.mensajeturnoElegirPregunta(jugador.getNombre(), tipoPregunta);
+        Log.escribirLog(LogStrings.mensajeTurnoElegirPregunta(jugador.getNombre(), tipoPregunta));
     }
 }

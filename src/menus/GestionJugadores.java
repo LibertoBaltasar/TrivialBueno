@@ -2,6 +2,8 @@ package menus;
 
 import jugadores.JugadorGenerico;
 import jugadores.JugadorHumano;
+import log.Log;
+import log.LogStrings;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -12,7 +14,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class GestionJugadores implements MenuGenerico{
-    int opcion;
+    public int opcion;
     public static ArrayList<JugadorHumano> jugadores=new ArrayList<JugadorHumano>();
 
     public static void inicializarGestionJugadores(String ruta){
@@ -30,7 +32,7 @@ public class GestionJugadores implements MenuGenerico{
         }catch (IOException e){
             e.printStackTrace();
         }finally {
-            log.Log.mensajeInicializarGestionJugadores();
+            log.Log.escribirLog(LogStrings.mensajeInicializarGestionJugadores);
         }
     }
 
@@ -46,14 +48,13 @@ public class GestionJugadores implements MenuGenerico{
             if (opcion<1 || opcion>4){
                 System.out.println("Opción no válida");
             }
-            this.opcionElegida();
-            log.Log.mensajeMenuGestionJugadores();
+            this.gestionarOpcion();
+            Log.escribirLog(LogStrings.mensajeMenuGestionJugadores);
         }while(opcion!=4);
-
     }
 
     @Override
-    public void opcionElegida() {
+    public void gestionarOpcion() {
         switch (this.opcion){
             case 1:
                 verJugadoresSimple();
@@ -74,6 +75,7 @@ public class GestionJugadores implements MenuGenerico{
                 utilidades.Metodos.limpiarBufferTeclado();
                 break;
         }
+        Log.escribirLog(LogStrings.mensajeGestionarOpcionGestionJugadores);
     }
     public static boolean comprobarJugadorNoExiste(String nombreJugador){
         boolean valido=true;
@@ -93,7 +95,7 @@ public class GestionJugadores implements MenuGenerico{
         }else{
             System.out.println("El nombre tiene espacios");
         }
-        log.Log.mensajeComprobarJugador(nombreJugador);
+        Log.escribirLog(LogStrings.mensajeComprobarJugador(nombreJugador));
         return valido;
     }
     public static JugadorHumano devolverJugador(String nombreJugador){
@@ -103,8 +105,7 @@ public class GestionJugadores implements MenuGenerico{
                 jugadorADevolver = jugador;
             }
         }
-        log.Log.mensajeDevolverJugador(jugadorADevolver.getNombre());
-
+        Log.escribirLog(LogStrings.mensajeDevolverJugador(jugadorADevolver.getNombre()));
          return jugadorADevolver;
     }
     public static void verJugadoresConPuntuacion(){
@@ -117,14 +118,15 @@ public class GestionJugadores implements MenuGenerico{
                 jugador.mostrarJugadorConPuntuacion();
             }
         }
-        log.Log.mensajeVerJugadoresConPuntuacion();
-
+        Log.escribirLog(LogStrings.mensajeVerJugadoresConPuntuacion);
     }
     public static void verJugadoresSimple(){
+        int indice=1;
         for (JugadorHumano jugador : jugadores) {
-            jugador.mostrarJugadorSimple();
+            jugador.mostrarJugadorSimple(indice);
+            indice++;
         }
-        log.Log.mensajeVerJugadorSimple();
+        Log.escribirLog(LogStrings.mensajeVerJugadorSimple);
     }
     public static void annadirJugador(String nombre){
             if(comprobarJugadorNoExiste(nombre)) {
@@ -133,9 +135,9 @@ public class GestionJugadores implements MenuGenerico{
             }
             GestionJugadores.ordenarJugadores();
             GestionJugadores.reescribirRanking();
-            log.Log.mensajeAnnadirJugador(nombre);
+            Log.escribirLog(LogStrings.mensajeAnnadirJugador(nombre));
     }
-    public static void annadirPuntuacionHistoricaJugador(String nombre, int puntuacion){
+    private static void annadirPuntuacionHistoricaJugador(String nombre, int puntuacion){
         if(!comprobarJugadorNoExiste(nombre)) {
             for (JugadorHumano jugador : jugadores) {
                 if (jugador.getNombre().equals(nombre)) {
@@ -146,6 +148,7 @@ public class GestionJugadores implements MenuGenerico{
             JugadorHumano jugador = new JugadorHumano(nombre,puntuacion);
             jugadores.add(jugador);
         }
+        Log.escribirLog(LogStrings.mensajeAnnadirJugadorPuntuacionHistorica(nombre, puntuacion));
     }
 
     public static void eliminarJugador(String nombre){
@@ -157,15 +160,15 @@ public class GestionJugadores implements MenuGenerico{
             }
         }
         if(borrado){
-            log.Log.mensajeEliminarJugador(nombre);
+            LogStrings.mensajeEliminarJugador(nombre);
         }else{
             System.out.println("No se ha encontrado el jugador");
         }
     }
 
-    public static void ordenarJugadores() {
+    private static void ordenarJugadores() {
         jugadores.sort(Comparator.comparingInt(JugadorHumano::getPuntuacion));
-        log.Log.mensajeOrdenarJugadores();
+        Log.escribirLog(LogStrings.mensajeOrdenarJugadores);
     }
 
     public static void actualizarRanking(JugadorGenerico[] jugadoresPartida){
@@ -180,9 +183,9 @@ public class GestionJugadores implements MenuGenerico{
         }
         ordenarJugadores();
         reescribirRanking();
-        //TODO CREAR LOG
+        Log.escribirLog(LogStrings.mensajeActualizarRanking);
     }
-    public static void reescribirRanking(){
+    private static void reescribirRanking(){
         String jugadorString;
         Path path = Paths.get(utilidades.Rutas.RUTA_RANKING);
         try {
@@ -201,7 +204,7 @@ public class GestionJugadores implements MenuGenerico{
                     Files.write(path, jugadorString.getBytes(), StandardOpenOption.APPEND);
                 }
             }
-            log.Log.mensajeGuardarNuevoRanking();
+            Log.escribirLog(LogStrings.mensajeGuardarNuevoRanking);
         } catch (IOException e) {
             e.printStackTrace();
         }

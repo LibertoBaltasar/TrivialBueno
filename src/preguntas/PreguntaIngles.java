@@ -1,6 +1,8 @@
 package preguntas;
 
 import jugadores.JugadorGenerico;
+import log.Log;
+import log.LogStrings;
 import utilidades.Rutas;
 
 import java.io.IOException;
@@ -25,6 +27,7 @@ public class PreguntaIngles extends PreguntaGenerica{
         } catch (IOException e) {
             System.out.println("Error al leer el archivo: " + e.getMessage());
         }
+        Log.escribirLog(LogStrings.mensajeInicializarArrayIngles);
     }
     @Override
     public void mostrarPregunta() {
@@ -45,10 +48,11 @@ public class PreguntaIngles extends PreguntaGenerica{
         for(int i=0;i<4;i++){
             System.out.println(utilidades.Metodos.cambiarNumeroChar(i+1)+".- "+posiblesRespuestas[i]);
         }
+        Log.escribirLog(LogStrings.mensajeMostrarPreguntaIngles);
         this.jugador.responderIngles(respuestaCorrecta, posiblesRespuestas);
     }
 
-    public void desordenarRespuestas(String[] posiblesRespuestas){
+    private void desordenarRespuestas(String[] posiblesRespuestas){
         String respuestaDesordenada;
         int posicion2;
         int posicion1;
@@ -60,9 +64,11 @@ public class PreguntaIngles extends PreguntaGenerica{
             posiblesRespuestas[posicion1]=posiblesRespuestas[posicion2];
             posiblesRespuestas[posicion2]=respuestaDesordenada;
         }
+        Log.escribirLog(LogStrings.mensajeDesordenarRespuestas(numCambios));
     }
     public static String devolverRespuestaSeleccionada(int numeroRespuesta, String respuestasPosibles[]){
         System.out.println("Respuesta seleccionada: "+ respuestasPosibles[numeroRespuesta]);
+        Log.escribirLog(LogStrings.mensajeDevolverRespuestaSeleccionada);
         return respuestasPosibles[numeroRespuesta];
     }
 }
