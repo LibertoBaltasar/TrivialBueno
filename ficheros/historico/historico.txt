@@ -1,0 +1,8 @@
+CPU1:9 puntos//CPU2:12 puntos//CPU3:8 puntos//CPU4:11 puntos
+
+CPU1:7 puntos//CPU2:8 puntos//CPU3:8 puntos//CPU4:9 puntos
+
+CPU1:8 puntos//CPU2:7 puntos//CPU3:9 puntos//CPU4:9 puntos
+
+CPU1:8 puntos//CPU2:11 puntos//CPU3:6 puntos//CPU4:5 puntos
+
