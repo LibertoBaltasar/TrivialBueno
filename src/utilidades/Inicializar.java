@@ -1,5 +1,6 @@
 package utilidades;
 
+import log.Log;
 import log.LogStrings;
 import menus.GestionJugadores;
 
@@ -13,6 +14,8 @@ public class Inicializar {
         inicializarArrayJugadores();
         inicializarHistorico();
         inicializarPreguntas();
+        inicializarLog();
+        Log.escribirLog(LogStrings.mensajeInicializarGeneral);
     }
     // TODO: 07/05/2024 meter las rutas como constantes 
     public static void comprobarFicheros() {
@@ -32,16 +35,19 @@ public class Inicializar {
                 System.out.println("No se puede crear el fichero ranking.txt");
             }
         }
-        LogStrings.mensajeComprobarFicheros();
+        Log.escribirLog(LogStrings.mensajeComprobarFicheros);
     }
-    public static void inicializarArrayJugadores(){
+    private static void inicializarArrayJugadores(){
         GestionJugadores.inicializarGestionJugadores("/ficheros/ranking/ranking.txt");
     }
-    public static void inicializarHistorico() {
+    private static void inicializarHistorico() {
         main.Historico.inicializarHistorico();
     }
-    public static void inicializarPreguntas(){
+    private static void inicializarPreguntas(){
         preguntas.PreguntaIngles.inicializarArrayIngles();
         preguntas.PreguntaLengua.inicializarArrayPreguntasLengua();
+    }
+    private static void inicializarLog(){
+        Log.inicializarLog();
     }
 }

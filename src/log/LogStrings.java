@@ -45,7 +45,7 @@ public class LogStrings {
     public static final String mensajeOrdenarJugadores="Se han ordenado los jugadores por puntuación";
 
     public static final String mensajeGuardarNuevoRanking="Se ha actualizado el ranking";
-    //mensajes partida
+//mensajes partida
     public static final String mensajeCrearPartida(int numTurnos, int numJugadores, int numJugadoresHumanos){
         return("Se ha creado una partida con "+numTurnos+" turnos, "+numJugadores+" jugadores y "+numJugadoresHumanos+" jugadores humanos");
     }
@@ -58,21 +58,27 @@ public class LogStrings {
 
     public static final String mensajeFinPartida="La partida ha finalizado";
 
+    public static String mensajeGenerarResultadoPartida(String resultado){
+        return("Se ha generado el resultado de la partida: "+resultado);
+    }
+
 //mensajes turnos
-    public static String mensajeturnoElegirPregunta(String nombreJugador, int tipoPregunta){
+    public static String mensajeTurnoElegirPregunta(String nombreJugador, int tipoPregunta){
         return("Al jugador "+nombreJugador+" le ha tocado una pregunta de tipo "+tipoPregunta);
     }
 //mensajes historico
     public static final String mensajeInicializarHistorico="Se ha inicializado el historico";
 
-    public static final String mensajeMostrarHistorico(){
-        return("Se ha mostrado el historico");
-    }
+    public static final String mensajeMostrarHistorico="Se ha mostrado el historico";
 
     public static final String mensajeGuardarNuevoHistorico="Se ha guardado el histórico actualizado";
 
-    //mensajes preguntas
-    public static String mensajeRespuestaCorrecta(String nombreJugador, int respuestaCorrecta, int respuestaJugador){
+    public static String mensajeActualizarHistorico(String resultadoPartida){
+        return("Se ha actualizado el histórico con el resultado de la partida: "+resultadoPartida);
+    }
+
+//mensajes preguntas
+    public static String mensajeRespuestaCorrecta(String nombreJugador, String respuestaCorrecta, String respuestaJugador){
         return("El jugador "+nombreJugador+" ha acertado la respuesta "+respuestaCorrecta+" con "+respuestaJugador);
     }
 
@@ -108,6 +114,15 @@ public class LogStrings {
 
     public static String mensajePedirCaracter(char caracter){
         return("Se ha pedido un caracter y se ha introducido: "+caracter);
+    }
+
+//jugadores
+    public static String mensajeMostrarJugadorConPuntuacion(String nombre, int puntuacion){
+        return("Se ha mostrado el jugador "+nombre+" con puntuación "+puntuacion);
+    }
+
+    public static String mensajeMostrarJugadorSimple(String nombre){
+        return("Se ha mostrado el jugador "+nombre);
     }
 
 

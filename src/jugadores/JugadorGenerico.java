@@ -1,8 +1,8 @@
 package jugadores;
 
 public abstract class JugadorGenerico {
-    int puntuacion;
-    String nombre;
+    protected int puntuacion;
+    protected String nombre;
     public void puntuar(){
         this.puntuacion++;
     }

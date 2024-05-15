@@ -1,6 +1,8 @@
 package preguntas;
 
 import jugadores.JugadorGenerico;
+import log.Log;
+import log.LogStrings;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 import utilidades.Metodos;
@@ -34,10 +36,11 @@ public class PreguntaMatematica extends PreguntaGenerica{
         e=new ExpressionBuilder(this.pregunta).build();
         this.respuesta=(int) e.evaluate();
         System.out.println("Resuelve la siguiente operación: "+this.pregunta);
+        Log.escribirLog(LogStrings.mensajeMostrarPreguntaIngles);
         this.jugador.responderMatematicas(this.respuesta);
     }
 
-    public String elegirSimbolo(int simbolo){
+    private String elegirSimbolo(int simbolo){
         String elegirSimbolo="";
         switch (simbolo){
             case 1:
@@ -50,6 +53,7 @@ public class PreguntaMatematica extends PreguntaGenerica{
                 elegirSimbolo="*";
                 break;
         }
+        Log.escribirLog(LogStrings.mensajeElegirSimbolo(elegirSimbolo));
         return elegirSimbolo;
     }
 }

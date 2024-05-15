@@ -1,6 +1,9 @@
 package preguntas;
 
 import jugadores.JugadorGenerico;
+import log.Log;
+import log.LogStrings;
+import utilidades.Rutas;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -21,8 +24,9 @@ public class PreguntaLengua extends PreguntaGenerica{
         Path path = Paths.get(utilidades.Rutas.RUTA_LENGUA);
         try {
             preguntas = (ArrayList<String>) Files.readAllLines(path);
+            Log.escribirLog(LogStrings.mensajeInicializarArrayPreguntasLengua);
         } catch (IOException e) {
-            System.out.println("Error al leer el archivo: " + e.getMessage());
+            System.out.println("Error al leer el archivo: " + Rutas.RUTA_LENGUA);
         }
     }
     @Override
@@ -37,7 +41,9 @@ public class PreguntaLengua extends PreguntaGenerica{
         letrasOcultas =new int[respuestaCorrecta.length()/3];
         letrasAOcultar(respuestaCorrecta,letrasOcultas);
         preguntaMostrada=formatearPregunta(respuestaCorrecta,letrasOcultas);
+        System.out.println("Escribe la palabra rellenando los huecos");
         System.out.println(preguntaMostrada);
+        Log.escribirLog(LogStrings.mensajeMostrarPreguntaLengua);
         this.jugador.responderLengua(respuestaCorrecta);
 
     }
@@ -60,8 +66,9 @@ public class PreguntaLengua extends PreguntaGenerica{
                 letrasOcultas[i] = letraNueva;
             }
         }
+        Log.escribirLog(LogStrings.mensajeLetrasAOcultar);
     }
-    public String formatearPregunta(String respuestaCorrecta, int[] letrasOcultas){
+    private String formatearPregunta(String respuestaCorrecta, int[] letrasOcultas){
         String preguntaFormateada;
         char[] respuestaArray;
         respuestaArray=respuestaCorrecta.toCharArray();
@@ -73,6 +80,7 @@ public class PreguntaLengua extends PreguntaGenerica{
             }
         }
         preguntaFormateada=String.valueOf(respuestaArray);
+        Log.escribirLog(LogStrings.mensajeFormatearPreguntaLengua);
         return preguntaFormateada;
     }
 }

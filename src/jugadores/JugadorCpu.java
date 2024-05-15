@@ -1,5 +1,6 @@
 package jugadores;
 
+import log.Log;
 import log.LogStrings;
 
 public class JugadorCpu extends JugadorGenerico{
@@ -17,14 +18,14 @@ public class JugadorCpu extends JugadorGenerico{
             respuestaJugador = respuestaJugador.substring(0, respuestaJugador.length() - 1) + 'o';
         }
         System.out.println("Respuesta incorrecta");
-        LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador);
+        Log.escribirLog(LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador));
     }
 
     @Override
     public void responderMatematicas(int respuesta) {
         System.out.println("Su respuesta es: " + respuesta);
         this.puntuar();
-        LogStrings.mensajeRespuestaCorrecta(this.getNombre(), respuesta, respuesta);
+        Log.escribirLog(LogStrings.mensajeRespuestaCorrecta(this.getNombre(), ""+respuesta, ""+respuesta));
     }
 
     @Override
@@ -36,9 +37,11 @@ public class JugadorCpu extends JugadorGenerico{
             System.out.println("Respuesta escogida: " + posiblesRespuestasImpresas[respuestaCpu]);
             System.out.println("Respuesta correcta");
             this.puntuar();
+            Log.escribirLog(LogStrings.mensajeRespuestaCorrecta(this.getNombre(), respuestaCorrecta, respuestaCpuString));
         }else{
             System.out.println("Respuesta escogida: " + posiblesRespuestasImpresas[respuestaCpu]);
             System.out.println("Respuesta incorrecta");
+            Log.escribirLog(LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), respuestaCorrecta, respuestaCpuString));
         }
         //TODO: 07/05/2024 añadir mensaje de log
     }

@@ -1,10 +1,11 @@
 package jugadores;
 
+import log.Log;
 import log.LogStrings;
 import preguntas.PreguntaIngles;
 
 public class JugadorHumano extends JugadorGenerico{
-    int puntuacionHistorica;
+    private int puntuacionHistorica;
 
     public JugadorHumano(String nombre, int puntuacionHistorica) {
         this.puntuacion =0;
@@ -28,10 +29,12 @@ public class JugadorHumano extends JugadorGenerico{
 
     public void mostrarJugadorConPuntuacion(){
         System.out.println("Nombre:" + nombre + " // Puntuacion Historica:" + puntuacionHistorica);
+        Log.escribirLog(LogStrings.mensajeMostrarJugadorConPuntuacion(this.getNombre(), this.getPuntuacionHistorica()));
     }
 
-    public void mostrarJugadorSimple(){
-        System.out.println("Nombre:" + nombre);
+    public void mostrarJugadorSimple(int indice){
+        System.out.println(indice+".-Nombre:" + nombre);
+        Log.escribirLog(LogStrings.mensajeMostrarJugadorSimple(this.getNombre()));
     }
     @Override
     public void responderLengua(String respuestaCorrecta) {
@@ -41,8 +44,10 @@ public class JugadorHumano extends JugadorGenerico{
         if (respuestaJugador.equals(respuestaCorrecta)) {
             System.out.println("Respuesta correcta");
             puntuacion++;
+            Log.escribirLog(LogStrings.mensajeRespuestaCorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador));
         } else {
             System.out.println("Respuesta incorrecta");
+            Log.escribirLog(LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador));
         }
     }
 
@@ -54,9 +59,10 @@ public class JugadorHumano extends JugadorGenerico{
         if (respuestaJugador == respuestaCorrecta) {
             System.out.println("Respuesta correcta");
             puntuacion++;
-            LogStrings.mensajeRespuestaCorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador);
+            Log.escribirLog(LogStrings.mensajeRespuestaCorrecta(this.getNombre(), ""+respuestaCorrecta, ""+respuestaJugador));
         } else {
             System.out.println("Respuesta incorrecta");
+            Log.escribirLog(LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), ""+respuestaCorrecta, ""+respuestaJugador));
         }
     }
 
