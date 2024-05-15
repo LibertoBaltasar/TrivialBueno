@@ -6,16 +6,26 @@ import log.LogStrings;
 import net.objecthunter.exp4j.Expression;
 import net.objecthunter.exp4j.ExpressionBuilder;
 import utilidades.Metodos;
-
+/**
+ * La clase PreguntaMatematica se encarga de la gestión de las preguntas de matemáticas.
+ * Extiende de la clase abstracta PreguntaGenerica.
+ */
 public class PreguntaMatematica extends PreguntaGenerica{
     String pregunta;
     int respuesta;
     JugadorGenerico jugador;
-
+    /**
+     * Este constructor inicializa una nueva pregunta de matemáticas.
+     * Asigna el jugador que va a responder esta pregunta.
+     * @param jugador El jugador que va a responder esta pregunta.
+     */
     public PreguntaMatematica(JugadorGenerico jugador) {
         this.jugador = jugador;
     }
-
+    /**
+     * Este método muestra la pregunta de matemáticas.
+     * Genera una pregunta de matemáticas y la muestra al jugador.
+     */
     @Override
     public void mostrarPregunta() {
         int longitud;
@@ -39,7 +49,11 @@ public class PreguntaMatematica extends PreguntaGenerica{
         Log.escribirLog(LogStrings.mensajeMostrarPreguntaMatematica);
         this.jugador.responderMatematicas(this.respuesta);
     }
-
+    /**
+     * Este método elige un símbolo para la operación matemática.
+     * @param simbolo Un entero que representa el tipo de símbolo a elegir.
+     * @return El símbolo elegido para la operación matemática.
+     */
     private String elegirSimbolo(int simbolo){
         String elegirSimbolo="";
         switch (simbolo){

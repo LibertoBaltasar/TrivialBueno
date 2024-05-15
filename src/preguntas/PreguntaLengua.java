@@ -10,15 +10,25 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-
+/**
+ * La clase PreguntaLengua se encarga de la gestión de las preguntas de lengua.
+ * Extiende de la clase abstracta PreguntaGenerica.
+ */
 public class PreguntaLengua extends PreguntaGenerica{
     JugadorGenerico jugador;
     public static ArrayList<String> preguntas;
-
+    /**
+     * Este constructor inicializa una nueva pregunta de lengua.
+     * Asigna el jugador que va a responder esta pregunta.
+     * @param jugador El jugador que va a responder esta pregunta.
+     */
     public PreguntaLengua(JugadorGenerico jugador) {
         this.jugador = jugador;
     }
-
+    /**
+     * Este método inicializa el array de preguntas de lengua.
+     * Carga las preguntas desde un archivo si existe.
+     */
     public static void inicializarArrayPreguntasLengua(){
         preguntas = new ArrayList<>();
         Path path = Paths.get(utilidades.Rutas.RUTA_LENGUA);
@@ -29,6 +39,10 @@ public class PreguntaLengua extends PreguntaGenerica{
             System.out.println("Error al leer el archivo: " + Rutas.RUTA_LENGUA);
         }
     }
+    /**
+     * Este método muestra la pregunta de lengua.
+     * Genera una pregunta de lengua y la muestra al jugador.
+     */
     @Override
     public void mostrarPregunta() {
         int numeroPregunta;
@@ -46,6 +60,11 @@ public class PreguntaLengua extends PreguntaGenerica{
         this.jugador.responderLengua(respuestaCorrecta);
 
     }
+    /**
+     * Este método decide qué letras de la respuesta correcta se van a ocultar.
+     * @param respuestaCorrecta La respuesta correcta a la pregunta.
+     * @param letrasOcultas Un array de enteros que representa las posiciones de las letras que se van a ocultar.
+     */
     private void letrasAOcultar(String respuestaCorrecta, int[] letrasOcultas){
         int longitud;
         int cantidadLetras;
@@ -66,6 +85,13 @@ public class PreguntaLengua extends PreguntaGenerica{
         }
         Log.escribirLog(LogStrings.mensajeLetrasAOcultar);
     }
+    /**
+     * Este método formatea la pregunta para mostrarla al jugador.
+     * Reemplaza las letras que se van a ocultar por guiones bajos.
+     * @param respuestaCorrecta La respuesta correcta a la pregunta.
+     * @param letrasOcultas Un array de enteros que representa las posiciones de las letras que se van a ocultar.
+     * @return La pregunta formateada para mostrar al jugador.
+     */
     private String formatearPregunta(String respuestaCorrecta, int[] letrasOcultas){
         String preguntaFormateada;
         char[] respuestaArray;

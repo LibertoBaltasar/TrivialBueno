@@ -10,15 +10,25 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-
+/**
+ * La clase PreguntaIngles se encarga de la gestión de las preguntas en inglés.
+ * Extiende de la clase abstracta PreguntaGenerica.
+ */
 public class PreguntaIngles extends PreguntaGenerica{
     JugadorGenerico jugador;
     public static ArrayList<String> preguntas;
-
+    /**
+     * Este constructor inicializa una nueva pregunta en inglés.
+     * Asigna el jugador que va a responder esta pregunta.
+     * @param jugador El jugador que va a responder esta pregunta.
+     */
     public PreguntaIngles(JugadorGenerico jugador) {
         this.jugador = jugador;
     }
-
+    /**
+     * Este método inicializa el array de preguntas en inglés.
+     * Carga las preguntas desde un archivo si existe.
+     */
     public static void inicializarArrayIngles(){
         preguntas = new ArrayList<>();
         Path path = Paths.get(Rutas.RUTA_INGLES);
@@ -29,6 +39,10 @@ public class PreguntaIngles extends PreguntaGenerica{
         }
         Log.escribirLog(LogStrings.mensajeInicializarArrayIngles);
     }
+    /**
+     * Este método muestra la pregunta en inglés.
+     * Genera una pregunta de inglés y la muestra al jugador.
+     */
     @Override
     public void mostrarPregunta() {
         int preguntaElegida;
@@ -51,7 +65,10 @@ public class PreguntaIngles extends PreguntaGenerica{
         Log.escribirLog(LogStrings.mensajeMostrarPreguntaIngles);
         this.jugador.responderIngles(respuestaCorrecta, posiblesRespuestas);
     }
-
+    /**
+     * Este método desordena las respuestas posibles a la pregunta.
+     * @param posiblesRespuestas Las respuestas posibles a la pregunta.
+     */
     private void desordenarRespuestas(String[] posiblesRespuestas){
         String respuestaDesordenada;
         int posicion2;
@@ -66,6 +83,12 @@ public class PreguntaIngles extends PreguntaGenerica{
         }
         Log.escribirLog(LogStrings.mensajeDesordenarRespuestas(numCambios));
     }
+    /**
+     * Este método devuelve la respuesta seleccionada por el jugador.
+     * @param numeroRespuesta El número de la respuesta seleccionada por el jugador.
+     * @param respuestasPosibles Las respuestas posibles a la pregunta.
+     * @return La respuesta seleccionada por el jugador.
+     */
     public static String devolverRespuestaSeleccionada(int numeroRespuesta, String respuestasPosibles[]){
         System.out.println("Respuesta seleccionada: "+ respuestasPosibles[numeroRespuesta]);
         Log.escribirLog(LogStrings.mensajeDevolverRespuestaSeleccionada);
