@@ -4,11 +4,20 @@ import jugadores.JugadorGenerico;
 import log.Log;
 import log.LogStrings;
 import menus.GestionJugadores;
-
+/**
+ * La clase Partida se encarga de la gestión de las partidas del juego.
+ */
 public class Partida {
     int numTurnos;
     JugadorGenerico[] arrayJugadores;
     String resultadoPartida;
+    /**
+     * Este constructor inicializa una nueva partida.
+     * Crea un array de jugadores y establece el número de turnos de la partida.
+     * @param numTurnos El número de turnos de la partida.
+     * @param numJugadores El número total de jugadores en la partida.
+     * @param numJugadoresHumanos El número de jugadores humanos en la partida.
+     */
     public Partida(int numTurnos, int numJugadores, int numJugadoresHumanos) {
         String nombreJugador;
         this.numTurnos = numTurnos;
@@ -17,11 +26,10 @@ public class Partida {
         for (int i = 0; i < numJugadoresHumanos; i++) {
             System.out.println("Introduce el nombre de un jugador");
             nombreJugador= utilidades.Metodos.pedirCadena();
-            // TODO: 07/05/2024 revisar la condición del if
             if(!menus.GestionJugadores.comprobarJugadorNoExiste(nombreJugador)){
                 arrayJugadores[i]= GestionJugadores.devolverJugador(nombreJugador);
             }else{
-                System.out.println("El jugador no existe, pero quieres añadirlo?");
+                System.out.println("El jugador no existe.¿Quieres añadirlo?");
                 System.out.println("1.-Si");
                 System.out.println("2.-No");
                 if(utilidades.Metodos.pedirEntero()==1){
@@ -41,7 +49,10 @@ public class Partida {
         }
         Log.escribirLog(LogStrings.mensajeCrearPartida(numTurnos, numJugadores, numJugadoresHumanos));
     }
-
+    /**
+     * Este método gestiona el bucle principal de la partida.
+     * Crea un nuevo turno para cada jugador en cada ronda hasta que se alcanza el número de turnos.
+     */
     public void buclePartida(){
         int turnosJugados=0;
         Turno turno;
@@ -57,6 +68,11 @@ public class Partida {
         GestionJugadores.actualizarRanking(arrayJugadores);
         Log.escribirLog(LogStrings.mensajeFinPartida);
     }
+    /**
+     * Este método genera el resultado de la partida.
+     * Imprime la puntuación de cada jugador en la partida.
+     * @return Un String con el resultado de la partida.
+     */
     private String generarResultadoPartida(){
         this.resultadoPartida="";
         for (int i=0; i<arrayJugadores.length;i++){

@@ -8,15 +8,23 @@ import preguntas.PreguntaIngles;
 import preguntas.PreguntaLengua;
 import preguntas.PreguntaMatematica;
 import utilidades.Metodos;
-
+/**
+ * La clase Turno se encarga de la gestión de los turnos de una partida.
+ */
 public class Turno {
     private JugadorGenerico jugador;
-
+    /**
+     * La clase Turno se encarga de la gestión de los turnos de una partida.
+     * Cada vez que se llama a los métodos de esta clase, se actualiza el estado del turno.
+     */
     public Turno(JugadorGenerico jugador) {
         this.jugador = jugador;
         Log.escribirLog(LogStrings.mensajeCrearTurno(this.jugador.getNombre()));
     }
-
+    /**
+     * Este método permite al jugador elegir una pregunta.
+     * Genera una pregunta de un tipo aleatorio y la muestra al jugador.
+     */
     public void elegirPregunta(){
         int tipoPregunta;
         PreguntaGenerica pregunta;

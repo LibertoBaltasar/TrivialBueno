@@ -31,7 +31,6 @@ public class PreguntaLengua extends PreguntaGenerica{
     }
     @Override
     public void mostrarPregunta() {
-        //TODO: 07/05/2024 pulir mensaje mostrado
         int numeroPregunta;
         String respuestaCorrecta;
         String preguntaMostrada;
@@ -55,7 +54,6 @@ public class PreguntaLengua extends PreguntaGenerica{
         cantidadLetras=longitud/3;
         for(int i=0;i<cantidadLetras;i++){
             //TODO: 07/05/2024 ver como afinar los índices del array
-            //empiezo en uno y termino en longitud+1 para evitar el valor por defecto del array
             letraNueva=utilidades.Metodos.generarNumeroAleatorio(1,longitud);
             for(int j=0;j<letrasOcultas.length;j++){
                 if(letrasOcultas[j]==letraNueva){

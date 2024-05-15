@@ -4,8 +4,16 @@ import log.Log;
 import log.LogStrings;
 import main.Historico;
 
+import static utilidades.Constantes.OPCION_NO_VALIDA;
+/**
+ * La clase MenuPrincipal se encarga de la gestión del menú principal del juego.
+ */
 public class MenuPrincipal implements MenuGenerico{
     int opcion;
+    /**
+     * Este método muestra el menú principal del juego.
+     * Permite al usuario seleccionar una opción para navegar por el juego.
+     */
     @Override
     public void mostrarMenu(){
 
@@ -18,7 +26,7 @@ public class MenuPrincipal implements MenuGenerico{
             System.out.println("5.-Salir");
             opcion=utilidades.Metodos.pedirEntero();
             if(opcion<1 || opcion>5){
-                System.out.println("Opción no válida");
+                System.out.println(OPCION_NO_VALIDA);
             }
             this.gestionarOpcion();
             Log.escribirLog(LogStrings.mensajemenuPrincipal);
@@ -27,6 +35,10 @@ public class MenuPrincipal implements MenuGenerico{
         System.out.println("Has salido del menú principal");
 
     }
+    /**
+     * Este método gestiona la opción seleccionada por el usuario en el menú principal.
+     * Ejecuta la acción correspondiente a la opción seleccionada por el usuario.
+     */
     @Override
     public void gestionarOpcion(){
         MenuGenerico menu;

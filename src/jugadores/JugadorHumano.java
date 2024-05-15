@@ -4,6 +4,8 @@ import log.Log;
 import log.LogStrings;
 import preguntas.PreguntaIngles;
 
+import static utilidades.Constantes.*;
+
 public class JugadorHumano extends JugadorGenerico{
     private int puntuacionHistorica;
 
@@ -27,8 +29,8 @@ public class JugadorHumano extends JugadorGenerico{
         this.puntuacionHistorica = puntuacionHistorica;
     }
 
-    public void mostrarJugadorConPuntuacion(){
-        System.out.println("Nombre:" + nombre + " // Puntuacion Historica:" + puntuacionHistorica);
+    public void mostrarJugadorConPuntuacion(int indice){
+        System.out.println(indice+".-Nombre:" + nombre + " // Puntuacion Historica:" + puntuacionHistorica);
         Log.escribirLog(LogStrings.mensajeMostrarJugadorConPuntuacion(this.getNombre(), this.getPuntuacionHistorica()));
     }
 
@@ -39,14 +41,14 @@ public class JugadorHumano extends JugadorGenerico{
     @Override
     public void responderLengua(String respuestaCorrecta) {
         String respuestaJugador;
-        System.out.println("Introduce la respuesta");
+        System.out.println(INTRODUCE_LA_RESPUESTA);
         respuestaJugador = utilidades.Metodos.pedirCadena();
         if (respuestaJugador.equals(respuestaCorrecta)) {
-            System.out.println("Respuesta correcta");
+            System.out.println(RESPUESTA_CORRECTA);
             puntuacion++;
             Log.escribirLog(LogStrings.mensajeRespuestaCorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador));
         } else {
-            System.out.println("Respuesta incorrecta");
+            System.out.println(RESPUESTA_INCORRECTA);
             Log.escribirLog(LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador));
         }
     }
@@ -54,14 +56,14 @@ public class JugadorHumano extends JugadorGenerico{
     @Override
     public void responderMatematicas(int respuestaCorrecta) {
         int respuestaJugador;
-        System.out.println("Introduce la respuesta");
+        System.out.println(INTRODUCE_LA_RESPUESTA);
         respuestaJugador = utilidades.Metodos.pedirEntero();
         if (respuestaJugador == respuestaCorrecta) {
-            System.out.println("Respuesta correcta");
+            System.out.println(RESPUESTA_CORRECTA);
             puntuacion++;
             Log.escribirLog(LogStrings.mensajeRespuestaCorrecta(this.getNombre(), ""+respuestaCorrecta, ""+respuestaJugador));
         } else {
-            System.out.println("Respuesta incorrecta");
+            System.out.println(RESPUESTA_INCORRECTA);
             Log.escribirLog(LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), ""+respuestaCorrecta, ""+respuestaJugador));
         }
     }
@@ -73,7 +75,7 @@ public class JugadorHumano extends JugadorGenerico{
         String  repuestaTeclado;
         String respuestaJugadorString;
         do {
-            System.out.println("Introduce la respuesta");
+            System.out.println(INTRODUCE_LA_RESPUESTA);
             respuestaJugadorChar = utilidades.Metodos.pedirCaracter();
             respuestaJugadorInt=utilidades.Metodos.cambiarCharNumero(respuestaJugadorChar);
             if (respuestaJugadorInt==5){
@@ -82,10 +84,10 @@ public class JugadorHumano extends JugadorGenerico{
         }while(respuestaJugadorInt==5);
         respuestaJugadorString=PreguntaIngles.devolverRespuestaSeleccionada(respuestaJugadorInt,posiblesRespuestas);
         if (respuestaJugadorString.equals(RespuestaCorrecta)) {
-            System.out.println("Respuesta correcta");
+            System.out.println(RESPUESTA_CORRECTA);
             puntuacion++;
         } else {
-            System.out.println("Respuesta incorrecta");
+            System.out.println(RESPUESTA_INCORRECTA);
         }
     }
 }

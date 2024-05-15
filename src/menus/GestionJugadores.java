@@ -13,10 +13,21 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+import static utilidades.Constantes.INTRODUCE_EL_NOMBRE_DEL_JUGADOR;
+import static utilidades.Constantes.OPCION_NO_VALIDA;
+/**
+ * La clase GestionJugadores se encarga de la gestión de los jugadores.
+ */
 public class GestionJugadores implements MenuGenerico{
+
     public int opcion;
     public static ArrayList<JugadorHumano> jugadores=new ArrayList<JugadorHumano>();
 
+    /**
+     * Este método inicializa la gestión de jugadores.
+     * Carga la lista de jugadores desde un archivo si existe.
+     * @param ruta La ruta del archivo donde se guardan los jugadores.
+     */
     public static void inicializarGestionJugadores(String ruta){
         //JugadorHumano jugadorPorDefecto = new JugadorHumano("JugadorPorDefecto", 0);
         Path path = Paths.get(utilidades.Rutas.RUTA_RANKING);
@@ -35,7 +46,10 @@ public class GestionJugadores implements MenuGenerico{
             log.Log.escribirLog(LogStrings.mensajeInicializarGestionJugadores);
         }
     }
-
+    /**
+     * Este método muestra el menú de gestión de jugadores.
+     * Permite al usuario seleccionar una opción para gestionar los jugadores.
+     */
     @Override
     public void mostrarMenu() {
         do{
@@ -46,13 +60,16 @@ public class GestionJugadores implements MenuGenerico{
             System.out.println("4.-Atrás");
             opcion=utilidades.Metodos.pedirEntero();
             if (opcion<1 || opcion>4){
-                System.out.println("Opción no válida");
+                System.out.println(OPCION_NO_VALIDA);
             }
             this.gestionarOpcion();
             Log.escribirLog(LogStrings.mensajeMenuGestionJugadores);
         }while(opcion!=4);
     }
-
+    /**
+     * Este método gestiona la opción seleccionada por el usuario.
+     * Ejecuta la acción correspondiente a la opción seleccionada por el usuario.
+     */
     @Override
     public void gestionarOpcion() {
         switch (this.opcion){
@@ -60,12 +77,12 @@ public class GestionJugadores implements MenuGenerico{
                 verJugadoresSimple();
                 break;
             case 2:
-                System.out.println("Introduce el nombre del jugador");
+                System.out.println(INTRODUCE_EL_NOMBRE_DEL_JUGADOR);
                 String nombre=utilidades.Metodos.pedirCadena();
                 annadirJugador(nombre);
                 break;
             case 3:
-                System.out.println("Introduce el nombre del jugador");
+                System.out.println(INTRODUCE_EL_NOMBRE_DEL_JUGADOR);
                 String nombreEliminar=utilidades.Metodos.pedirCadena();
                 eliminarJugador(nombreEliminar);
                 break;
@@ -77,6 +94,11 @@ public class GestionJugadores implements MenuGenerico{
         }
         Log.escribirLog(LogStrings.mensajeGestionarOpcionGestionJugadores);
     }
+    /**
+     * Este método comprueba si un jugador no existe en la lista de jugadores.
+     * @param nombreJugador El nombre del jugador a comprobar.
+     * @return Verdadero si el jugador no existe, falso en caso contrario.
+     */
     public static boolean comprobarJugadorNoExiste(String nombreJugador){
         boolean valido=true;
         if(utilidades.Metodos.tieneEspacios(nombreJugador)) {
@@ -98,6 +120,11 @@ public class GestionJugadores implements MenuGenerico{
         Log.escribirLog(LogStrings.mensajeComprobarJugador(nombreJugador));
         return valido;
     }
+    /**
+     * Este método devuelve un jugador de la lista de jugadores.
+     * @param nombreJugador El nombre del jugador a devolver.
+     * @return El jugador con el nombre indicado.
+     */
     public static JugadorHumano devolverJugador(String nombreJugador){
         JugadorHumano jugadorADevolver=new JugadorHumano("JugadorPorDefecto",0);
         for (JugadorHumano jugador : jugadores) {
@@ -108,18 +135,27 @@ public class GestionJugadores implements MenuGenerico{
         Log.escribirLog(LogStrings.mensajeDevolverJugador(jugadorADevolver.getNombre()));
          return jugadorADevolver;
     }
+
+    /**
+     * Este método muestra los jugadores con su puntuación.
+     */
     public static void verJugadoresConPuntuacion(){
         JugadorHumano jugador;
+        int indice=1;
         if(jugadores.isEmpty()){
             System.out.println("No hay jugadores");
         }else {
             for (int i=jugadores.size()-1;i>=0;i--){
                 jugador=jugadores.get(i);
-                jugador.mostrarJugadorConPuntuacion();
+                jugador.mostrarJugadorConPuntuacion(indice);
+                indice++;
             }
         }
         Log.escribirLog(LogStrings.mensajeVerJugadoresConPuntuacion);
     }
+    /**
+     * Este método muestra los jugadores sin su puntuación.
+     */
     public static void verJugadoresSimple(){
         int indice=1;
         for (JugadorHumano jugador : jugadores) {
@@ -128,6 +164,10 @@ public class GestionJugadores implements MenuGenerico{
         }
         Log.escribirLog(LogStrings.mensajeVerJugadorSimple);
     }
+    /**
+     * Este método añade un jugador a la lista de jugadores si no existe ya.
+     * @param nombre El nombre del jugador a añadir.
+     */
     public static void annadirJugador(String nombre){
             if(comprobarJugadorNoExiste(nombre)) {
                 JugadorHumano jugador = new JugadorHumano(nombre, 0);
@@ -137,6 +177,11 @@ public class GestionJugadores implements MenuGenerico{
             GestionJugadores.reescribirRanking();
             Log.escribirLog(LogStrings.mensajeAnnadirJugador(nombre));
     }
+    /**
+     * Este método añade la puntuación histórica a un jugador existente o crea un nuevo jugador con la puntuación dada.
+     * @param nombre El nombre del jugador al que se va a añadir la puntuación.
+     * @param puntuacion La puntuación que se va a añadir al jugador.
+     */
     private static void annadirPuntuacionHistoricaJugador(String nombre, int puntuacion){
         if(!comprobarJugadorNoExiste(nombre)) {
             for (JugadorHumano jugador : jugadores) {
@@ -150,7 +195,10 @@ public class GestionJugadores implements MenuGenerico{
         }
         Log.escribirLog(LogStrings.mensajeAnnadirJugadorPuntuacionHistorica(nombre, puntuacion));
     }
-
+    /**
+     * Este método elimina un jugador de la lista de jugadores.
+     * @param nombre El nombre del jugador a eliminar.
+     */
     public static void eliminarJugador(String nombre){
         boolean borrado=false;
         for (JugadorHumano jugador: jugadores) {
@@ -166,11 +214,17 @@ public class GestionJugadores implements MenuGenerico{
         }
     }
 
+    /**
+     * Este método ordena los jugadores por puntuación.
+     */
     private static void ordenarJugadores() {
         jugadores.sort(Comparator.comparingInt(JugadorHumano::getPuntuacion));
         Log.escribirLog(LogStrings.mensajeOrdenarJugadores);
     }
-
+    /**
+     * Este método actualiza el ranking de jugadores.
+     * @param jugadoresPartida El array de jugadores de la partida.
+     */
     public static void actualizarRanking(JugadorGenerico[] jugadoresPartida){
         String nombre;
         int puntuacionHistorica;
@@ -185,6 +239,10 @@ public class GestionJugadores implements MenuGenerico{
         reescribirRanking();
         Log.escribirLog(LogStrings.mensajeActualizarRanking);
     }
+
+    /**
+     * Este método reescribe el ranking de jugadores en el archivo de ranking.
+     */
     private static void reescribirRanking(){
         String jugadorString;
         Path path = Paths.get(utilidades.Rutas.RUTA_RANKING);
@@ -200,7 +258,6 @@ public class GestionJugadores implements MenuGenerico{
                 if (i == 0) {
                     Files.write(path, jugadorString.getBytes(), StandardOpenOption.WRITE);
                 }else{
-                    //TODO: ME LO AÑADE TODO EN LA MISMA LÍNEA
                     Files.write(path, jugadorString.getBytes(), StandardOpenOption.APPEND);
                 }
             }

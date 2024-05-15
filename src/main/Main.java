@@ -12,10 +12,10 @@ public class Main {
         MenuPrincipal menu=new MenuPrincipal();
         menu.mostrarMenu();
         Log.escribirLog(LogStrings.mensajeFinPrograma);
-        //TODO PULIR LOG MENSAJES
-        //TODO JAVADOC
+        //TODO PULIR LOG MENSAJES(hecho, se puede mejorar, pero no hace falta)
+        //TODO JAVADOC(hasta pregunta ingles)
         //TODO PULIR SOUTS
         //TODO PRUEBAS
-        //TODO VISIBILIDAD ATRIBUTOS Y ATRIBUTOS(poco prioritario
+        //TODO VISIBILIDAD ATRIBUTOS Y ATRIBUTOS(poco prioritario)
     }
 }
