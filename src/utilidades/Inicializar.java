@@ -10,11 +10,11 @@ import java.nio.file.Paths;
 
 public class Inicializar {
     public static void inicializar(){
+        inicializarLog();
         comprobarFicheros();
         inicializarArrayJugadores();
         inicializarHistorico();
         inicializarPreguntas();
-        inicializarLog();
         Log.escribirLog(LogStrings.mensajeInicializarGeneral);
     }
     // TODO: 07/05/2024 meter las rutas como constantes 
@@ -24,6 +24,7 @@ public class Inicializar {
             try {
                 Files.createFile(path);
             } catch (Exception e) {
+                e.printStackTrace();
                 System.out.println("No se puede crear el fichero historico.txt");
             }
         }
@@ -32,6 +33,7 @@ public class Inicializar {
             try {
                 Files.createFile(path);
             } catch (Exception e) {
+                e.printStackTrace();
                 System.out.println("No se puede crear el fichero ranking.txt");
             }
         }

@@ -1,3 +1,0 @@
-pepe,0
-liberto,1
-raquel,3

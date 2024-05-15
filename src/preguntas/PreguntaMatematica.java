@@ -36,7 +36,7 @@ public class PreguntaMatematica extends PreguntaGenerica{
         e=new ExpressionBuilder(this.pregunta).build();
         this.respuesta=(int) e.evaluate();
         System.out.println("Resuelve la siguiente operación: "+this.pregunta);
-        Log.escribirLog(LogStrings.mensajeMostrarPreguntaIngles);
+        Log.escribirLog(LogStrings.mensajeMostrarPreguntaMatematica);
         this.jugador.responderMatematicas(this.respuesta);
     }
 

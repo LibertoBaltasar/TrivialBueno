@@ -43,6 +43,5 @@ public class JugadorCpu extends JugadorGenerico{
             System.out.println("Respuesta incorrecta");
             Log.escribirLog(LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), respuestaCorrecta, respuestaCpuString));
         }
-        //TODO: 07/05/2024 añadir mensaje de log
     }
 }

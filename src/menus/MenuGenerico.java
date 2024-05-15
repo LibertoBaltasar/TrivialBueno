@@ -2,5 +2,5 @@ package menus;
 
 public interface MenuGenerico {
     public void mostrarMenu();
-    public void gestionarOpcion(){}
+    public void gestionarOpcion();
 }

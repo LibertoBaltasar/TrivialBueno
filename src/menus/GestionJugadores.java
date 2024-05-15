@@ -75,7 +75,7 @@ public class GestionJugadores implements MenuGenerico{
                 utilidades.Metodos.limpiarBufferTeclado();
                 break;
         }
-        Log.escribirLog(LogStrings.mensajeGestionOpcionGestionJugadores);
+        Log.escribirLog(LogStrings.mensajeGestionarOpcionGestionJugadores);
     }
     public static boolean comprobarJugadorNoExiste(String nombreJugador){
         boolean valido=true;
@@ -146,7 +146,7 @@ public class GestionJugadores implements MenuGenerico{
             JugadorHumano jugador = new JugadorHumano(nombre,puntuacion);
             jugadores.add(jugador);
         }
-        Log.escribirLog(LogStrings.mensajeAnnadirJugadorPuntuacionHistorica);
+        Log.escribirLog(LogStrings.mensajeAnnadirJugadorPuntuacionHistorica(nombre, puntuacion));
     }
 
     public static void eliminarJugador(String nombre){

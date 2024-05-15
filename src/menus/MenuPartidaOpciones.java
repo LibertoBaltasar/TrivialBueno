@@ -34,19 +34,19 @@ public class MenuPartidaOpciones implements MenuGenerico{
     private int obtenerNumeroDeTurnos(int opcion) {
         switch (opcion) {
             case 1:
-                Log.escribirLog(LogStrings.MensajeObtenerNumeroDeTurnos(3));
+                Log.escribirLog(LogStrings.mensajeObtenerNumeroTurnos(3));
                 return 3;
             case 2:
-                Log.escribirLog(LogStrings.MensajeObtenerNumeroDeTurnos(5));
+                Log.escribirLog(LogStrings.mensajeObtenerNumeroTurnos(5));
                 return 5;
             case 3:
-                Log.escribirLog(LogStrings.MensajeObtenerNumeroDeTurnos(10));
+                Log.escribirLog(LogStrings.mensajeObtenerNumeroTurnos(10));
                 return 10;
             case 4:
-                Log.escribirLog(LogStrings.MensajeObtenerNumeroDeTurnos(20));
+                Log.escribirLog(LogStrings.mensajeObtenerNumeroTurnos(20));
                 return 20;
             default:
-                Log.escribirLog(LogStrings.MensajeObtenerNumeroDeTurnos(0));
+                Log.escribirLog(LogStrings.mensajeObtenerNumeroTurnos(0));
                 return 0;
             }
 
@@ -74,7 +74,7 @@ public class MenuPartidaOpciones implements MenuGenerico{
                 System.out.println("Introduce un número de jugadores válido");
             }
         }while (numJugadores < 1 || numJugadores > 5) ;
-        Log.escribirLog(LogStrings.mensajeElegirNumerosJugadores);
+        Log.escribirLog(LogStrings.mensajeElegirNumerosJugadores(numJugadores));
     }
     private void elegirNumeroJugadoresHumanos(){
         do {
@@ -85,6 +85,6 @@ public class MenuPartidaOpciones implements MenuGenerico{
                 System.out.println("Introduce un número de jugadores válido");
             }
         }while (numJugadoresHumanos < 0 || numJugadoresHumanos > numJugadores) ;
-        Log.escribirLog(LogStrings.mensajeElegirNumerosJugadoresHumanos);
+        Log.escribirLog(LogStrings.mensajeElegirNumerosJugadoresHumanos(numJugadoresHumanos));
     }
 }
