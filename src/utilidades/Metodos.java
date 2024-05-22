@@ -47,6 +47,7 @@ public class Metodos {
      * @return El número entero introducido por el usuario.
      */
     public static int pedirEntero() {
+        //bug se quedaba el teclado en bucle
         int entero;
         boolean valido=false;
         do {
