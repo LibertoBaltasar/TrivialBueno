@@ -29,7 +29,8 @@ public class Metodos {
      */
     public static boolean tieneEspacios(String cadenaAEvaluar) {
         Log.escribirLog(LogStrings.mensajeTieneEspacios(cadenaAEvaluar));
-        return !cadenaAEvaluar.contains(" ");
+        boolean tieneEspacios = cadenaAEvaluar.contains(" ");
+        return tieneEspacios;
     }
     /**
      * Este método solicita al usuario que introduzca una cadena.
@@ -51,13 +52,13 @@ public class Metodos {
         do {
             try {
                 entero = teclado.nextInt();
-                Metodos.limpiarBufferTeclado();
                 Log.escribirLog(LogStrings.mensajePedirEntero(entero));
                 valido = true;
             } catch (Exception e) {
                 System.out.println("Introduce un número");
                 entero = 0;
             }
+            Metodos.limpiarBufferTeclado();
         }while(!valido);
         return entero;
     }

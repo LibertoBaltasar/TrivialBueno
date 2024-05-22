@@ -26,7 +26,7 @@ public class Partida {
         for (int i = 0; i < numJugadoresHumanos; i++) {
             System.out.println("Introduce el nombre de un jugador");
             nombreJugador= utilidades.Metodos.pedirCadena();
-            if(!menus.GestionJugadores.comprobarJugadorNoExiste(nombreJugador)){
+            /*if(!menus.GestionJugadores.comprobarJugadorNoExiste(nombreJugador)){
                 arrayJugadores[i]= GestionJugadores.devolverJugador(nombreJugador);
             }else{
                 System.out.println("El jugador no existe.¿Quieres añadirlo?");
@@ -38,6 +38,24 @@ public class Partida {
                 }else{
                     i--;
                 }
+             */
+            if (GestionJugadores.comprobarNombreValido(nombreJugador)){
+                if(GestionJugadores.comprobarJugadorExiste(nombreJugador)) {
+                    arrayJugadores[i] = GestionJugadores.devolverJugador(nombreJugador);
+                }else{
+                    System.out.println("El jugador no existe. ¿Quieres añadirlo?");
+                    System.out.println("1.-Si");
+                    System.out.println("2.-No");
+                    if(utilidades.Metodos.pedirEntero()==1){
+                        GestionJugadores.annadirJugador(nombreJugador);
+                        arrayJugadores[i]= GestionJugadores.devolverJugador(nombreJugador);
+                    }else{
+                        i--;
+                    }
+                }
+            }else{
+                System.out.println("El nombre introducido no es válido. Introduce un nombre válido");
+                i--;
             }
 
         }
@@ -57,10 +75,12 @@ public class Partida {
         int turnosJugados=0;
         Turno turno;
         do{
+            System.out.println("Ronda: "+ (turnosJugados+1));
             for (int i=0; i<arrayJugadores.length;i++){
                 turno=new Turno(arrayJugadores[i]);
                 turno.elegirPregunta();
             }
+            System.out.println("Fin de la ronda");
             turnosJugados++;
         }while(turnosJugados<numTurnos);
         resultadoPartida=this.generarResultadoPartida();
@@ -73,6 +93,11 @@ public class Partida {
      * Imprime la puntuación de cada jugador en la partida.
      * @return Un String con el resultado de la partida.
      */
+    private void generarResutltadoRonda(){
+        for (int i=0; i<arrayJugadores.length;i++) {
+            System.out.println(arrayJugadores[i].getNombre() + " ha obtenido " + arrayJugadores[i].getPuntuacion() + " puntos");
+        }
+    }
     private String generarResultadoPartida(){
         this.resultadoPartida="";
         for (int i=0; i<arrayJugadores.length;i++){

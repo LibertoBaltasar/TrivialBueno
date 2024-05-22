@@ -26,6 +26,7 @@ public class Turno {
      * Genera una pregunta de un tipo aleatorio y la muestra al jugador.
      */
     public void elegirPregunta(){
+        System.out.println("Turno de "+jugador.getNombre());
         int tipoPregunta;
         PreguntaGenerica pregunta;
         tipoPregunta=Metodos.generarNumeroAleatorio(1,3);
