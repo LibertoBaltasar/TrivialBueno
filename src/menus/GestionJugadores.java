@@ -196,6 +196,8 @@ public class GestionJugadores implements MenuGenerico{
             if (!comprobarJugadorExiste(nombre)) {
                 JugadorHumano jugador = new JugadorHumano(nombre, 0);
                 jugadores.add(jugador);
+            }else{
+                System.out.println("El jugador ya existe");
             }
             GestionJugadores.ordenarJugadores();
             GestionJugadores.reescribirRanking();

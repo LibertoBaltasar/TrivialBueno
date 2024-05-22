@@ -42,6 +42,7 @@ public class Partida {
             if (GestionJugadores.comprobarNombreValido(nombreJugador)){
                 if(GestionJugadores.comprobarJugadorExiste(nombreJugador)) {
                     arrayJugadores[i] = GestionJugadores.devolverJugador(nombreJugador);
+                    System.out.println("Jugador añadido");
                 }else{
                     System.out.println("El jugador no existe. ¿Quieres añadirlo?");
                     System.out.println("1.-Si");
