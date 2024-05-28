@@ -94,12 +94,13 @@ public class GestionJugadores implements MenuGenerico{
         }
         Log.escribirLog(LogStrings.mensajeGestionarOpcionGestionJugadores);
     }
+    /*
     /**
      * Este método comprueba si un jugador no existe en la lista de jugadores.
      * @param nombreJugador El nombre del jugador a comprobar.
      * @return Verdadero si el jugador no existe, falso en caso contrario.
      */
-    public static boolean comprobarJugadorNoExiste(String nombreJugador){
+   /* public static boolean comprobarJugadorNoExiste(String nombreJugador){
         boolean valido=true;
         if(utilidades.Metodos.tieneEspacios(nombreJugador)) {
             if(nombreJugador.isEmpty()){
@@ -118,6 +119,28 @@ public class GestionJugadores implements MenuGenerico{
             System.out.println("El nombre tiene espacios");
         }
         Log.escribirLog(LogStrings.mensajeComprobarJugador(nombreJugador));
+        return valido;
+    }
+    */
+    public static boolean comprobarNombreValido(String nombreJugador){
+        boolean valido=true;
+        if(utilidades.Metodos.tieneEspacios(nombreJugador)){
+            valido=false;
+        }else if(nombreJugador.isEmpty()){
+            System.out.println("El nombre no puede estar vacío");
+            valido=false;
+        } else if (nombreJugador.equalsIgnoreCase("CPU1") || nombreJugador.equalsIgnoreCase("CPU2") || nombreJugador.equalsIgnoreCase("CPU3") || nombreJugador.equalsIgnoreCase("CPU4")) {
+            System.out.println("El nombre no puede ser CPU1, CPU2, CPU3 o CPU4");
+        }
+        return valido;
+    }
+    public static boolean comprobarJugadorExiste(String nombreJugador){
+        boolean valido=false;
+        for (JugadorHumano jugador : jugadores) {
+            if (jugador.getNombre().equals(nombreJugador)) {
+                valido = true;
+            }
+        }
         return valido;
     }
     /**
@@ -169,13 +192,19 @@ public class GestionJugadores implements MenuGenerico{
      * @param nombre El nombre del jugador a añadir.
      */
     public static void annadirJugador(String nombre){
-            if(comprobarJugadorNoExiste(nombre)) {
+        if(comprobarNombreValido(nombre)) {
+            if (!comprobarJugadorExiste(nombre)) {
                 JugadorHumano jugador = new JugadorHumano(nombre, 0);
                 jugadores.add(jugador);
+            }else{
+                System.out.println("El jugador ya existe");
             }
             GestionJugadores.ordenarJugadores();
             GestionJugadores.reescribirRanking();
             Log.escribirLog(LogStrings.mensajeAnnadirJugador(nombre));
+        }else{
+            System.out.println("No se ha añadido al jugador");
+        }
     }
     /**
      * Este método añade la puntuación histórica a un jugador existente o crea un nuevo jugador con la puntuación dada.
@@ -183,7 +212,7 @@ public class GestionJugadores implements MenuGenerico{
      * @param puntuacion La puntuación que se va a añadir al jugador.
      */
     private static void annadirPuntuacionHistoricaJugador(String nombre, int puntuacion){
-        if(!comprobarJugadorNoExiste(nombre)) {
+        if(comprobarJugadorExiste(nombre)) {
             for (JugadorHumano jugador : jugadores) {
                 if (jugador.getNombre().equals(nombre)) {
                     jugador.setPuntuacionHistorica(puntuacion);
@@ -201,11 +230,15 @@ public class GestionJugadores implements MenuGenerico{
      */
     public static void eliminarJugador(String nombre){
         boolean borrado=false;
+        int indiceJugador=-1;
         for (JugadorHumano jugador: jugadores) {
             if (jugador.getNombre().equals(nombre)){
-                jugadores.remove(jugador);
-                borrado=true;
+                indiceJugador=jugadores.indexOf(jugador);
             }
+        }
+        if(indiceJugador!=-1){
+            jugadores.remove(indiceJugador);
+            borrado=true;
         }
         if(borrado){
             LogStrings.mensajeEliminarJugador(nombre);

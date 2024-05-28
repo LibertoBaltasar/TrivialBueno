@@ -1,0 +1,553 @@
+[2024/05/22][20:57] Se ha inicializado el log
+[2024/05/22][11:14] Se ha comprobado si los ficheros existen
+[2024/05/22][11:14] Se ha inicializado el arrayList de jugadores
+[2024/05/22][11:14] Se ha inicializado el historico
+[2024/05/22][11:14] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][11:14] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][11:14] Se ha preparado el programa el programa
+[2024/05/22][11:14] Se ha entrado en el método main
+[2024/05/22][11:15] Se ha limpiado el buffer del teclado
+[2024/05/22][11:15] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:15] Se ha limpiado el buffer del teclado
+[2024/05/22][11:15] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:15] Se han mostrado los jugadores sin puntuación
+[2024/05/22][11:15] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:15] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:15] Se ha limpiado el buffer del teclado
+[2024/05/22][11:15] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:15] Se ha pedido una cadena y se ha introducido: liberto
+[2024/05/22][11:15] Se ha comprobado si la cadena liberto tiene espacios
+[2024/05/22][11:15] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:15] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:15] Se ha limpiado el buffer del teclado
+[2024/05/22][11:15] Se ha pedido un entero y se ha introducido: 3
+[2024/05/22][11:15] Se ha pedido una cadena y se ha introducido: liberto
+[2024/05/22][11:15] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:15] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:15] Se ha limpiado el buffer del teclado
+[2024/05/22][11:15] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:15] Se han mostrado los jugadores sin puntuación
+[2024/05/22][11:15] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:15] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:15] Se ha limpiado el buffer del teclado
+[2024/05/22][11:15] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:15] Se ha pedido una cadena y se ha introducido: l
+[2024/05/22][11:15] Se ha comprobado si la cadena l tiene espacios
+[2024/05/22][11:15] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:15] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:15] Se ha limpiado el buffer del teclado
+[2024/05/22][11:15] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:15] Se han mostrado los jugadores sin puntuación
+[2024/05/22][11:15] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:15] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:17] Se ha comprobado si los ficheros existen
+[2024/05/22][11:17] Se ha inicializado el arrayList de jugadores
+[2024/05/22][11:17] Se ha inicializado el historico
+[2024/05/22][11:17] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][11:17] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][11:17] Se ha preparado el programa el programa
+[2024/05/22][11:17] Se ha entrado en el método main
+[2024/05/22][11:17] Se ha limpiado el buffer del teclado
+[2024/05/22][11:17] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:17] Se ha limpiado el buffer del teclado
+[2024/05/22][11:17] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:17] Se ha pedido una cadena y se ha introducido: libertp
+[2024/05/22][11:17] Se ha comprobado si la cadena libertp tiene espacios
+[2024/05/22][11:17] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:17] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:18] Se ha comprobado si los ficheros existen
+[2024/05/22][11:18] Se ha inicializado el arrayList de jugadores
+[2024/05/22][11:18] Se ha inicializado el historico
+[2024/05/22][11:18] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][11:18] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][11:18] Se ha preparado el programa el programa
+[2024/05/22][11:18] Se ha entrado en el método main
+[2024/05/22][11:18] Se ha limpiado el buffer del teclado
+[2024/05/22][11:18] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:18] Se ha limpiado el buffer del teclado
+[2024/05/22][11:18] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:18] Se ha pedido una cadena y se ha introducido: liber
+[2024/05/22][11:18] Se ha comprobado si la cadena liber tiene espacios
+[2024/05/22][11:19] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:19] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:19] Se ha comprobado si los ficheros existen
+[2024/05/22][11:19] Se ha inicializado el arrayList de jugadores
+[2024/05/22][11:19] Se ha inicializado el historico
+[2024/05/22][11:19] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][11:19] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][11:19] Se ha preparado el programa el programa
+[2024/05/22][11:19] Se ha entrado en el método main
+[2024/05/22][11:20] Se ha limpiado el buffer del teclado
+[2024/05/22][11:20] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:20] Se ha gestionado la opción del menú principal
+[2024/05/22][11:20] Se ha limpiado el buffer del teclado
+[2024/05/22][11:20] Se ha pedido un entero y se ha introducido: 5
+[2024/05/22][11:20] Se ha elegido la opción: 5
+[2024/05/22][11:20] Se ha elegido la opción 5 con 0 jugadores y 0 jugadores humanos en el menú partida
+[2024/05/22][11:20] Se ha entrado al menú principal
+[2024/05/22][11:20] Se ha limpiado el buffer del teclado
+[2024/05/22][11:20] Se ha pedido un entero y se ha introducido: 3
+[2024/05/22][11:20] Se han mostrado los jugadores con puntuación o Ranking
+[2024/05/22][11:20] Se ha entrado al menú principal
+[2024/05/22][11:20] Se ha limpiado el buffer del teclado
+[2024/05/22][11:20] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:20] Se ha limpiado el buffer del teclado
+[2024/05/22][11:20] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:20] Se han mostrado los jugadores sin puntuación
+[2024/05/22][11:20] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:20] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:20] Se ha limpiado el buffer del teclado
+[2024/05/22][11:20] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:20] Se ha pedido una cadena y se ha introducido: liber
+[2024/05/22][11:20] Se ha comprobado si la cadena liber tiene espacios
+[2024/05/22][11:21] Se han ordenado los jugadores por puntuación
+[2024/05/22][11:21] Se ha actualizado el ranking
+[2024/05/22][11:21] Se ha añadido el jugador liber
+[2024/05/22][11:21] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:21] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:21] Se ha comprobado si los ficheros existen
+[2024/05/22][11:21] Se ha inicializado el arrayList de jugadores
+[2024/05/22][11:21] Se ha inicializado el historico
+[2024/05/22][11:21] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][11:21] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][11:21] Se ha preparado el programa el programa
+[2024/05/22][11:21] Se ha entrado en el método main
+[2024/05/22][11:21] Se ha limpiado el buffer del teclado
+[2024/05/22][11:21] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:21] Se ha limpiado el buffer del teclado
+[2024/05/22][11:21] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:21] Se ha pedido una cadena y se ha introducido: liberto
+[2024/05/22][11:21] Se ha comprobado si la cadena liberto tiene espacios
+[2024/05/22][11:22] Se han ordenado los jugadores por puntuación
+[2024/05/22][11:22] Se ha actualizado el ranking
+[2024/05/22][11:22] Se ha añadido el jugador liberto
+[2024/05/22][11:22] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:22] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:22] Se ha comprobado si los ficheros existen
+[2024/05/22][11:22] Se ha inicializado el arrayList de jugadores
+[2024/05/22][11:22] Se ha inicializado el historico
+[2024/05/22][11:22] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][11:22] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][11:22] Se ha preparado el programa el programa
+[2024/05/22][11:22] Se ha entrado en el método main
+[2024/05/22][11:22] Se ha limpiado el buffer del teclado
+[2024/05/22][11:22] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:22] Se ha gestionado la opción del menú principal
+[2024/05/22][11:22] Se ha limpiado el buffer del teclado
+[2024/05/22][11:22] Se ha pedido un entero y se ha introducido: 5
+[2024/05/22][11:22] Se ha elegido la opción: 5
+[2024/05/22][11:22] Se ha elegido la opción 5 con 0 jugadores y 0 jugadores humanos en el menú partida
+[2024/05/22][11:22] Se ha entrado al menú principal
+[2024/05/22][11:22] Se ha limpiado el buffer del teclado
+[2024/05/22][11:22] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:22] Se ha limpiado el buffer del teclado
+[2024/05/22][11:22] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:22] Se ha pedido una cadena y se ha introducido: liberto
+[2024/05/22][11:22] Se ha comprobado si la cadena liberto tiene espacios
+[2024/05/22][11:22] Se han ordenado los jugadores por puntuación
+[2024/05/22][11:22] Se ha actualizado el ranking
+[2024/05/22][11:22] Se ha añadido el jugador liberto
+[2024/05/22][11:22] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:22] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:22] Se ha limpiado el buffer del teclado
+[2024/05/22][11:22] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:22] Se ha mostrado el jugador liberto
+[2024/05/22][11:22] Se han mostrado los jugadores sin puntuación
+[2024/05/22][11:22] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:22] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:23] Se ha limpiado el buffer del teclado
+[2024/05/22][11:23] Se ha pedido un entero y se ha introducido: 3
+[2024/05/22][11:23] Se ha pedido una cadena y se ha introducido: liberto
+[2024/05/22][11:29] Se ha comprobado si los ficheros existen
+[2024/05/22][11:29] Se ha inicializado el arrayList de jugadores
+[2024/05/22][11:29] Se ha inicializado el historico
+[2024/05/22][11:29] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][11:29] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][11:29] Se ha preparado el programa el programa
+[2024/05/22][11:29] Se ha entrado en el método main
+[2024/05/22][11:29] Se ha limpiado el buffer del teclado
+[2024/05/22][11:29] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:29] Se ha limpiado el buffer del teclado
+[2024/05/22][11:29] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:29] Se ha mostrado el jugador liberto
+[2024/05/22][11:29] Se han mostrado los jugadores sin puntuación
+[2024/05/22][11:29] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:29] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:29] Se ha limpiado el buffer del teclado
+[2024/05/22][11:29] Se ha pedido un entero y se ha introducido: 3
+[2024/05/22][11:29] Se ha pedido una cadena y se ha introducido: liberto
+[2024/05/22][11:29] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:29] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:29] Se ha limpiado el buffer del teclado
+[2024/05/22][11:29] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:29] Se han mostrado los jugadores sin puntuación
+[2024/05/22][11:29] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:29] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:32] Se ha limpiado el buffer del teclado
+[2024/05/22][11:32] Se ha pedido un entero y se ha introducido: 4
+[2024/05/22][11:32] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][11:32] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][11:32] Se ha entrado al menú principal
+[2024/05/22][11:32] Se ha limpiado el buffer del teclado
+[2024/05/22][11:32] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:32] Se ha gestionado la opción del menú principal
+[2024/05/22][11:32] Se ha limpiado el buffer del teclado
+[2024/05/22][11:32] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:32] Se ha elegido la opción: 1
+[2024/05/22][11:32] Se ha limpiado el buffer del teclado
+[2024/05/22][11:32] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:32] Se ha elegido el número de jugadores: 2
+[2024/05/22][11:32] Se ha limpiado el buffer del teclado
+[2024/05/22][11:32] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:32] Se ha elegido el número de jugadores humanos: 2
+[2024/05/22][11:32] Se ha obtenido el número de turnos: 3
+[2024/05/22][11:32] Se ha pedido una cadena y se ha introducido: liberto
+[2024/05/22][11:32] Se ha comprobado si la cadena liberto tiene espacios
+[2024/05/22][11:32] Se ha limpiado el buffer del teclado
+[2024/05/22][11:32] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:32] Se ha comprobado si la cadena liberto tiene espacios
+[2024/05/22][11:32] Se han ordenado los jugadores por puntuación
+[2024/05/22][11:32] Se ha actualizado el ranking
+[2024/05/22][11:32] Se ha añadido el jugador liberto
+[2024/05/22][11:32] Se ha devuelto el jugador liberto
+[2024/05/22][11:32] Se ha pedido una cadena y se ha introducido: pepe.
+[2024/05/22][11:32] Se ha comprobado si la cadena pepe. tiene espacios
+[2024/05/22][11:32] Se ha limpiado el buffer del teclado
+[2024/05/22][11:32] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:32] Se ha comprobado si la cadena pepe. tiene espacios
+[2024/05/22][11:32] Se han ordenado los jugadores por puntuación
+[2024/05/22][11:32] Se ha actualizado el ranking
+[2024/05/22][11:32] Se ha añadido el jugador pepe.
+[2024/05/22][11:32] Se ha devuelto el jugador pepe.
+[2024/05/22][11:32] Se ha creado una partida con 3 turnos, 2 jugadores y 2 jugadores humanos
+[2024/05/22][11:32] Se ha creado un turno para el jugador liberto
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 4 y 10
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 0 y 1000
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 4 y 10
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][11:32] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][11:32] Se han desordenado las respuestas 5 veces
+[2024/05/22][11:32] Se ha cambiado el número 1 a char
+[2024/05/22][11:32] Se ha cambiado el número 2 a char
+[2024/05/22][11:32] Se ha cambiado el número 3 a char
+[2024/05/22][11:32] Se ha cambiado el número 4 a char
+[2024/05/22][11:32] Se ha mostrado una pregunta de inglés
+[2024/05/22][11:33] Se ha comprobado si los ficheros existen
+[2024/05/22][11:33] Se ha inicializado el arrayList de jugadores
+[2024/05/22][11:33] Se ha inicializado el historico
+[2024/05/22][11:33] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][11:33] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][11:33] Se ha preparado el programa el programa
+[2024/05/22][11:33] Se ha entrado en el método main
+[2024/05/22][11:33] Se ha limpiado el buffer del teclado
+[2024/05/22][11:33] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:33] Se ha gestionado la opción del menú principal
+[2024/05/22][11:33] Se ha limpiado el buffer del teclado
+[2024/05/22][11:33] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:33] Se ha elegido la opción: 1
+[2024/05/22][11:33] Se ha limpiado el buffer del teclado
+[2024/05/22][11:33] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][11:33] Se ha elegido el número de jugadores: 2
+[2024/05/22][11:34] Se ha comprobado si los ficheros existen
+[2024/05/22][11:34] Se ha inicializado el arrayList de jugadores
+[2024/05/22][11:34] Se ha inicializado el historico
+[2024/05/22][11:34] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][11:34] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][11:34] Se ha preparado el programa el programa
+[2024/05/22][11:34] Se ha entrado en el método main
+[2024/05/22][11:34] Se ha comprobado si los ficheros existen
+[2024/05/22][11:34] Se ha inicializado el arrayList de jugadores
+[2024/05/22][11:34] Se ha inicializado el historico
+[2024/05/22][11:34] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][11:34] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][11:34] Se ha preparado el programa el programa
+[2024/05/22][11:34] Se ha entrado en el método main
+[2024/05/22][11:37] Se ha comprobado si los ficheros existen
+[2024/05/22][11:37] Se ha inicializado el arrayList de jugadores
+[2024/05/22][11:37] Se ha inicializado el historico
+[2024/05/22][11:37] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][11:37] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][11:37] Se ha preparado el programa el programa
+[2024/05/22][11:37] Se ha entrado en el método main
+[2024/05/22][11:37] Se ha limpiado el buffer del teclado
+[2024/05/22][11:37] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][11:37] Se ha limpiado el buffer del teclado
+[2024/05/22][11:37] Se ha gestionado la opción del menú principal
+[2024/05/22][11:37] Se ha limpiado el buffer del teclado
+[2024/05/22][11:37] Se ha pedido un entero y se ha introducido: 4
+[2024/05/22][11:37] Se ha limpiado el buffer del teclado
+[2024/05/22][11:37] Se ha elegido la opción: 4
+[2024/05/22][20:54] Se ha comprobado si los ficheros existen
+[2024/05/22][20:54] Se ha inicializado el arrayList de jugadores
+[2024/05/22][20:54] Se ha inicializado el historico
+[2024/05/22][20:54] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][20:54] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][20:54] Se ha preparado el programa el programa
+[2024/05/22][20:54] Se ha entrado en el método main
+[2024/05/22][20:55] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][20:55] Se ha limpiado el buffer del teclado
+[2024/05/22][20:55] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][20:55] Se ha limpiado el buffer del teclado
+[2024/05/22][20:55] Se ha mostrado el jugador liberto
+[2024/05/22][20:55] Se ha mostrado el jugador pepe.
+[2024/05/22][20:55] Se han mostrado los jugadores sin puntuación
+[2024/05/22][20:55] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][20:55] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][20:55] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][20:55] Se ha limpiado el buffer del teclado
+[2024/05/22][20:55] Se ha pedido una cadena y se ha introducido: alfa
+[2024/05/22][20:55] Se ha comprobado si la cadena alfa tiene espacios
+[2024/05/22][20:55] Se han ordenado los jugadores por puntuación
+[2024/05/22][20:55] Se ha actualizado el ranking
+[2024/05/22][20:55] Se ha añadido el jugador alfa
+[2024/05/22][20:55] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][20:55] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][20:55] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][20:55] Se ha limpiado el buffer del teclado
+[2024/05/22][20:55] Se ha pedido una cadena y se ha introducido: alfa
+[2024/05/22][20:55] Se ha comprobado si la cadena alfa tiene espacios
+[2024/05/22][20:55] Se han ordenado los jugadores por puntuación
+[2024/05/22][20:55] Se ha actualizado el ranking
+[2024/05/22][20:55] Se ha añadido el jugador alfa
+[2024/05/22][20:55] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][20:55] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][20:55] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][20:55] Se ha limpiado el buffer del teclado
+[2024/05/22][20:55] Se ha mostrado el jugador liberto
+[2024/05/22][20:55] Se ha mostrado el jugador pepe.
+[2024/05/22][20:55] Se ha mostrado el jugador alfa
+[2024/05/22][20:55] Se han mostrado los jugadores sin puntuación
+[2024/05/22][20:55] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][20:55] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][20:57] Se ha comprobado si los ficheros existen
+[2024/05/22][20:57] Se ha inicializado el arrayList de jugadores
+[2024/05/22][20:57] Se ha inicializado el historico
+[2024/05/22][20:57] Se ha inicializado el array de preguntas en inglés
+[2024/05/22][20:57] Se ha inicializado el array de preguntas en lengua
+[2024/05/22][20:57] Se ha preparado el programa el programa
+[2024/05/22][20:57] Se ha entrado en el método main
+[2024/05/22][20:57] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][20:57] Se ha limpiado el buffer del teclado
+[2024/05/22][20:57] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][20:57] Se ha limpiado el buffer del teclado
+[2024/05/22][20:57] Se ha pedido una cadena y se ha introducido: alfa
+[2024/05/22][20:57] Se ha comprobado si la cadena alfa tiene espacios
+[2024/05/22][20:57] Se han ordenado los jugadores por puntuación
+[2024/05/22][20:57] Se ha actualizado el ranking
+[2024/05/22][20:57] Se ha añadido el jugador alfa
+[2024/05/22][20:57] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][20:57] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][20:57] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][20:57] Se ha limpiado el buffer del teclado
+[2024/05/22][20:57] Se ha mostrado el jugador liberto
+[2024/05/22][20:57] Se ha mostrado el jugador pepe.
+[2024/05/22][20:57] Se ha mostrado el jugador alfa
+[2024/05/22][20:57] Se han mostrado los jugadores sin puntuación
+[2024/05/22][20:57] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][20:57] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][20:57] Se ha pedido un entero y se ha introducido: 4
+[2024/05/22][20:57] Se ha limpiado el buffer del teclado
+[2024/05/22][20:57] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][20:57] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][20:57] Se ha entrado al menú principal
+[2024/05/22][20:57] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][20:57] Se ha limpiado el buffer del teclado
+[2024/05/22][20:57] Se ha pedido un entero y se ha introducido: 3
+[2024/05/22][20:57] Se ha limpiado el buffer del teclado
+[2024/05/22][20:57] Se ha pedido una cadena y se ha introducido: alfa
+[2024/05/22][20:57] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][20:57] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][20:57] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][20:57] Se ha limpiado el buffer del teclado
+[2024/05/22][20:57] Se ha mostrado el jugador liberto
+[2024/05/22][20:57] Se ha mostrado el jugador pepe.
+[2024/05/22][20:57] Se han mostrado los jugadores sin puntuación
+[2024/05/22][20:57] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][20:57] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][20:57] Se ha pedido un entero y se ha introducido: 4
+[2024/05/22][20:57] Se ha limpiado el buffer del teclado
+[2024/05/22][20:57] Se ha gestionado la opción del menú de gestión de jugadores
+[2024/05/22][20:57] Se ha entrado en el menú de gestión de jugadores
+[2024/05/22][20:57] Se ha entrado al menú principal
+[2024/05/22][20:57] Se ha pedido un entero y se ha introducido: 3
+[2024/05/22][20:57] Se ha limpiado el buffer del teclado
+[2024/05/22][20:57] Se ha mostrado el jugador pepe. con puntuación 0
+[2024/05/22][20:57] Se ha mostrado el jugador liberto con puntuación 0
+[2024/05/22][20:57] Se han mostrado los jugadores con puntuación o Ranking
+[2024/05/22][20:57] Se ha entrado al menú principal
+[2024/05/22][20:57] Se ha pedido un entero y se ha introducido: 4
+[2024/05/22][20:57] Se ha limpiado el buffer del teclado
+[2024/05/22][20:57] Se ha mostrado el historico
+[2024/05/22][20:57] Se ha entrado al menú principal
+[2024/05/22][20:58] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][20:58] Se ha limpiado el buffer del teclado
+[2024/05/22][20:58] Se ha gestionado la opción del menú principal
+[2024/05/22][20:58] Se ha pedido un entero y se ha introducido: 1
+[2024/05/22][20:58] Se ha limpiado el buffer del teclado
+[2024/05/22][20:58] Se ha elegido la opción: 1
+[2024/05/22][20:58] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][20:58] Se ha limpiado el buffer del teclado
+[2024/05/22][20:58] Se ha elegido el número de jugadores: 2
+[2024/05/22][20:58] Se ha pedido un entero y se ha introducido: 2
+[2024/05/22][20:58] Se ha limpiado el buffer del teclado
+[2024/05/22][20:58] Se ha elegido el número de jugadores humanos: 2
+[2024/05/22][20:58] Se ha obtenido el número de turnos: 3
+[2024/05/22][20:58] Se ha pedido una cadena y se ha introducido: liberto
+[2024/05/22][20:58] Se ha comprobado si la cadena liberto tiene espacios
+[2024/05/22][20:58] Se ha devuelto el jugador liberto
+[2024/05/22][20:58] Se ha pedido una cadena y se ha introducido: pepe.
+[2024/05/22][20:58] Se ha comprobado si la cadena pepe. tiene espacios
+[2024/05/22][20:58] Se ha devuelto el jugador pepe.
+[2024/05/22][20:58] Se ha creado una partida con 3 turnos, 2 jugadores y 2 jugadores humanos
+[2024/05/22][20:58] Se ha creado un turno para el jugador liberto
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 4 y 8
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][20:58] Se ha elegido el símbolo: +
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][20:58] Se ha elegido el símbolo: *
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][20:58] Se ha elegido el símbolo: -
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][20:58] Se ha elegido el símbolo: +
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][20:58] Se ha elegido el símbolo: *
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][20:58] Se ha elegido el símbolo: +
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][20:58] Se ha elegido el símbolo: -
+[2024/05/22][20:58] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][20:58] Se ha mostrado una pregunta de matemáticas
+[2024/05/22][21:02] Se ha pedido un entero y se ha introducido: 171
+[2024/05/22][21:02] Se ha limpiado el buffer del teclado
+[2024/05/22][21:02] El jugador liberto ha acertado la respuesta 171 con 171
+[2024/05/22][21:02] Al jugador liberto le ha tocado una pregunta de tipo 1
+[2024/05/22][21:02] Se ha creado un turno para el jugador pepe.
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 4 y 8
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha elegido el símbolo: -
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha elegido el símbolo: +
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha elegido el símbolo: -
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha mostrado una pregunta de matemáticas
+[2024/05/22][21:02] Se ha pedido un entero y se ha introducido: -1
+[2024/05/22][21:02] Se ha limpiado el buffer del teclado
+[2024/05/22][21:02] El jugador pepe. ha acertado la respuesta -1 con -1
+[2024/05/22][21:02] Al jugador pepe. le ha tocado una pregunta de tipo 1
+[2024/05/22][21:02] Se ha creado un turno para el jugador liberto
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 4 y 8
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha elegido el símbolo: +
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha elegido el símbolo: -
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha elegido el símbolo: *
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha elegido el símbolo: -
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha elegido el símbolo: *
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha elegido el símbolo: -
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha elegido el símbolo: *
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:02] Se ha mostrado una pregunta de matemáticas
+[2024/05/22][21:02] Se ha pedido un entero y se ha introducido: 980
+[2024/05/22][21:02] Se ha limpiado el buffer del teclado
+[2024/05/22][21:02] El jugador liberto ha fallado la respuesta -210 con 980
+[2024/05/22][21:02] Al jugador liberto le ha tocado una pregunta de tipo 1
+[2024/05/22][21:02] Se ha creado un turno para el jugador pepe.
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 4 y 10
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 1000
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 1000
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 4 y 10
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se ha generado un número aleatorio entre 0 y 3
+[2024/05/22][21:02] Se han desordenado las respuestas 6 veces
+[2024/05/22][21:02] Se ha cambiado el número 1 a char
+[2024/05/22][21:02] Se ha cambiado el número 2 a char
+[2024/05/22][21:02] Se ha cambiado el número 3 a char
+[2024/05/22][21:02] Se ha cambiado el número 4 a char
+[2024/05/22][21:02] Se ha mostrado una pregunta de inglés
+[2024/05/22][21:04] Se ha pedido un caracter y se ha introducido: b
+[2024/05/22][21:04] Se ha cambiado el char b a número
+[2024/05/22][21:04] Se ha devuelto la respuesta seleccionada
+[2024/05/22][21:04] El jugador pepe. ha acertado la respuesta Helen Wood con Helen Wood
+[2024/05/22][21:04] Al jugador pepe. le ha tocado una pregunta de tipo 3
+[2024/05/22][21:04] Se ha creado un turno para el jugador liberto
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 4 y 8
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:04] Se ha elegido el símbolo: +
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:04] Se ha elegido el símbolo: *
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:04] Se ha elegido el símbolo: +
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:04] Se ha elegido el símbolo: +
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:04] Se ha elegido el símbolo: *
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:04] Se ha elegido el símbolo: +
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 2 y 12
+[2024/05/22][21:04] Se ha mostrado una pregunta de matemáticas
+[2024/05/22][21:04] Se ha pedido un entero y se ha introducido: 185
+[2024/05/22][21:04] Se ha limpiado el buffer del teclado
+[2024/05/22][21:04] El jugador liberto ha acertado la respuesta 185 con 185
+[2024/05/22][21:04] Al jugador liberto le ha tocado una pregunta de tipo 1
+[2024/05/22][21:04] Se ha creado un turno para el jugador pepe.
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 1 y 3
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 0 y 85220
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 1 y 10
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 1 y 10
+[2024/05/22][21:04] Se ha generado un número aleatorio entre 1 y 10
+[2024/05/22][21:04] Se han seleccionado las letras a ocultar en la pregunta
+[2024/05/22][21:04] Se ha formateado la pregunta
+[2024/05/22][21:04] Se ha mostrado una pregunta de lengua

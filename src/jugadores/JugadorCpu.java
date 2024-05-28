@@ -18,6 +18,7 @@ public class JugadorCpu extends JugadorGenerico{
             respuestaJugador = respuestaJugador.substring(0, respuestaJugador.length() - 1) + 'o';
         }
         System.out.println("Respuesta incorrecta");
+        this.fallar();
         Log.escribirLog(LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), respuestaCorrecta, respuestaJugador));
     }
 
@@ -41,7 +42,23 @@ public class JugadorCpu extends JugadorGenerico{
         }else{
             System.out.println("Respuesta escogida: " + posiblesRespuestasImpresas[respuestaCpu]);
             System.out.println("Respuesta incorrecta");
+            this.fallar();
             Log.escribirLog(LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), respuestaCorrecta, respuestaCpuString));
+        }
+    }
+
+    @Override
+    public void responderAzar(int respuestaCorrecta) {
+        int respuestaCpu = utilidades.Metodos.generarNumeroAleatorio(1,10);
+        System.out.println("Respuesta escogida: " + respuestaCpu);
+        if (respuestaCpu == respuestaCorrecta) {
+            System.out.println("Respuesta correcta");
+            this.puntuar();
+            Log.escribirLog(LogStrings.mensajeRespuestaCorrecta(this.getNombre(), ""+respuestaCorrecta, ""+respuestaCpu));
+        } else {
+            System.out.println("Respuesta incorrecta");
+            this.fallar();
+            Log.escribirLog(LogStrings.mensajeRespuestaIncorrecta(this.getNombre(), ""+respuestaCorrecta, ""+respuestaCpu));
         }
     }
 }
