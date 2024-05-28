@@ -87,6 +87,7 @@ public class Partida {
         resultadoPartida=this.generarResultadoPartida();
         Historico.actualizarHistorico(resultadoPartida);
         GestionJugadores.actualizarRanking(arrayJugadores);
+        GestionJugadores.reiniciarRacha(arrayJugadores);
         Log.escribirLog(LogStrings.mensajeFinPartida);
     }
     /**

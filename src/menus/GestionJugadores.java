@@ -299,5 +299,10 @@ public class GestionJugadores implements MenuGenerico{
             e.printStackTrace();
         }
     }
+    public static void reiniciarRacha(JugadorGenerico[] arrayJugadores){
+        for (int i = 0; i < arrayJugadores.length; i++) {
+            arrayJugadores[i].fallar();
+        }
+    }
 
 }
